@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Business_/Business_.csproj" Id="1da24b9d-487b-4465-a5c7-eabbb8ed7e5f" />
+  <Project Path="DataAccess/DataAccess.csproj" />
+  <Project Path="Entity/Entity.csproj" />
+  <Project Path="Library Management API/Library Management API.csproj" />
+</Solution>
