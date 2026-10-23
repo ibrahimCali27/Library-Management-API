@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\Business_.csproj": {}
+    "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Business_.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\Business_.csproj": {
+    "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Business_.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\Business_.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Business_.csproj",
         "projectName": "Business_",
-        "projectPath": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\Business_.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Business_.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -56,6 +56,14 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            },
             "Serilog.Sinks.Console": {
               "target": "Package",
               "version": "[6.1.1, )"
@@ -359,14 +367,14 @@
         }
       }
     },
-    "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -388,8 +396,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entity.csproj"
+              "C:\\Users\\user\\source\\repos\\Library-Management-API\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Entity\\Entity.csproj"
               }
             }
           }
@@ -411,6 +419,10 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[10.0.13, )"
@@ -754,14 +766,14 @@
         }
       }
     },
-    "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entity.csproj": {
+    "C:\\Users\\user\\source\\repos\\Library-Management-API\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -802,6 +814,10 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[10.0.13, )"

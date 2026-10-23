@@ -71,15 +71,10 @@ namespace DataAccess.Migrations
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<int>("User_BookId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.HasIndex("User_BookId")
                         .IsUnique();
@@ -117,6 +112,9 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CurrentMembershipId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -144,6 +142,8 @@ namespace DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CurrentMembershipId");
 
                     b.ToTable("Users");
                 });
@@ -189,38 +189,8 @@ namespace DataAccess.Migrations
                     b.ToTable("User_Book");
                 });
 
-            modelBuilder.Entity("Core.Entities.User_Membership", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("MembershipId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MembershipId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("User_Membership");
-                });
-
             modelBuilder.Entity("Core.Entities.Fine", b =>
                 {
-                    b.HasOne("Core.Entities.User", null)
-                        .WithMany("Fines")
-                        .HasForeignKey("UserId");
-
                     b.HasOne("Core.Entities.User_Book", "User_Book")
                         .WithOne("Fine")
                         .HasForeignKey("Core.Entities.Fine", "User_BookId")
@@ -228,6 +198,17 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("User_Book");
+                });
+
+            modelBuilder.Entity("Core.Entities.User", b =>
+                {
+                    b.HasOne("Core.Entities.Membership", "CurrentMembership")
+                        .WithMany("User")
+                        .HasForeignKey("CurrentMembershipId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CurrentMembership");
                 });
 
             modelBuilder.Entity("Core.Entities.User_Book", b =>
@@ -249,25 +230,6 @@ namespace DataAccess.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Core.Entities.User_Membership", b =>
-                {
-                    b.HasOne("Core.Entities.Membership", "Membership")
-                        .WithMany("User_Memberships")
-                        .HasForeignKey("MembershipId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Core.Entities.User", "User")
-                        .WithMany("User_Memberships")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Membership");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Core.Entities.Book", b =>
                 {
                     b.Navigation("User_Book");
@@ -275,16 +237,12 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Core.Entities.Membership", b =>
                 {
-                    b.Navigation("User_Memberships");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Core.Entities.User", b =>
                 {
-                    b.Navigation("Fines");
-
                     b.Navigation("User_Books");
-
-                    b.Navigation("User_Memberships");
                 });
 
             modelBuilder.Entity("Core.Entities.User_Book", b =>

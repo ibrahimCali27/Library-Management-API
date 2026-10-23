@@ -2,12 +2,13 @@
 using Business_.Interfaces;
 using Core.Entities;
 using DataAccess.Context;
+using Entity.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.ComponentModel;
 namespace Business_.BusinessLayer.BLL
 {
-    [ApiController]
     public class BookService(DBContext context) : IBookService
     {
         private readonly ILogger<BookService> _logger;
@@ -20,12 +21,10 @@ namespace Business_.BusinessLayer.BLL
 
             if (book == null)
             {
-                _logger.LogWarning("Book not found. BookId: {BookId}", dto.BookId);
                 throw new Exception("This book doesn't exist.");
             }
             if (book.Count <= 0)
             {
-                _logger.LogWarning("Book not found. BookId: {BookId}", dto.BookId);
                 throw new Exception("This book is not in stock.");
             }
             book.Count--;
@@ -42,18 +41,13 @@ namespace Business_.BusinessLayer.BLL
 
         public async Task<bool> ReturnBookAsync(ReturnBooksDto dto)
         {
-            var borrowedBook = await _context.User_Book
+            var BorrowRecord = await _context.User_Book
                 .FirstOrDefaultAsync(x =>
                     x.Book_Id == dto.BookId &&
                     x.User_Id == dto.UserId);
 
-            if (borrowedBook == null)
+            if (BorrowRecord == null)
             {
-                _logger.LogWarning(
-                    "Borrow record not found. BookId: {BookId}, UserId: {UserId}",
-                    dto.BookId,
-                    dto.UserId);
-
                 throw new Exception("This book was not borrowed by this user.");
             }
 
@@ -64,7 +58,7 @@ namespace Business_.BusinessLayer.BLL
             {
                 book.Count++;
             }
-            borrowedBook.Returned_Date = DateOnly.FromDateTime(DateTime.Now);
+            BorrowRecord.Returned_Date = DateOnly.FromDateTime(DateTime.Now);
             return await _context.SaveChangesAsync() > 0;
         }
 
@@ -76,19 +70,11 @@ namespace Business_.BusinessLayer.BLL
 
             if (user == null)
             {
-                _logger.LogWarning("User not found");
                 throw new Exception("User not found.");
-            }
-            var userType = user.UserType;
-            if (userType != UserType.Admin) 
-            {
-                _logger.LogWarning("User forbidden to add books. UserId: {UserId}", dto.UserId);
-                throw new Exception("You are not allowed to do this.");
-            }
+            }  
             var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Name == dto.Name);
             if (ExistingBook != null)
             {
-                _logger.LogWarning("Book already exists. BookName: {Name}", dto.Name);
                 throw new Exception("This book already exists."); 
             }
             var Book = new Book
@@ -112,23 +98,32 @@ namespace Business_.BusinessLayer.BLL
 
             if (user == null)
             {
-                _logger.LogWarning("User not found");
                 throw new Exception("User not found.");
-            }
-            var userType = user.UserType;
-            if (userType != UserType.Admin)
-            {
-                _logger.LogWarning("User is forbidden to add books. UserId: {UserId}", dto.UserId);
-                throw new Exception("You are not allowed to do this.");
             }
             var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Id == dto.BookId);
             if (ExistingBook == null) 
             {
-                _logger.LogWarning("Book doesn't exist. BookId: {BookId}", dto.BookId);
                 throw new Exception("This book doesn't exist.");
             } 
-            _context.Books.Remove(ExistingBook);
+            _context.Books.Remove(ExistingBook);  
             return await _context.SaveChangesAsync() > 0;
         }
+        public async Task<bool> UpdateBookAsync(UpdateBookDto dto)
+        {
+            var User = await _context.Users.FirstOrDefaultAsync(x => x.Id == dto.User_Id);
+            if (User == null) { }//Error
+
+            var BeUpdatedBook = await _context.Books.FirstOrDefaultAsync(y => y.Id == dto.Book_Id);
+            if (BeUpdatedBook == null) { }//Error
+
+            BeUpdatedBook.Name = dto.Name;
+            BeUpdatedBook.Writer = dto.Writer;
+            BeUpdatedBook.Genre = dto.Genre;
+            BeUpdatedBook.Count = dto.Count;
+            BeUpdatedBook.BookISMB = dto.BookISMB;
+
+            return await _context.SaveChangesAsync() > 0;
+        }
+
     }
 }

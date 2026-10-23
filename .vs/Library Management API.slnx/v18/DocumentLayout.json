@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Library Management API\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54B15E00-5038-90E9-2F7A-EFF10A915A83}|Entity\\Entity.csproj|c:\\users\\user\\source\\repos\\library management api\\entity\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54B15E00-5038-90E9-2F7A-EFF10A915A83}|Entity\\Entity.csproj|solutionrelative:entity\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54B15E00-5038-90E9-2F7A-EFF10A915A83}|Entity\\Entity.csproj|c:\\users\\user\\source\\repos\\library management api\\entity\\entities\\user_membership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54B15E00-5038-90E9-2F7A-EFF10A915A83}|Entity\\Entity.csproj|solutionrelative:entity\\entities\\user_membership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54B15E00-5038-90E9-2F7A-EFF10A915A83}|Entity\\Entity.csproj|c:\\users\\user\\source\\repos\\library management api\\entity\\entities\\membership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54B15E00-5038-90E9-2F7A-EFF10A915A83}|Entity\\Entity.csproj|solutionrelative:entity\\entities\\membership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\finebbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\finebbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\booksbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\booksbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Membership.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entities\\Membership.cs",
-              "RelativeDocumentMoniker": "Entity\\Entities\\Membership.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entities\\Membership.cs",
-              "RelativeToolTip": "Entity\\Entities\\Membership.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAwwIQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T10:33:24.99Z",
+              "WhenOpened": "2026-10-23T13:55:14.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User_Membership.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entities\\User_Membership.cs",
-              "RelativeDocumentMoniker": "Entity\\Entities\\User_Membership.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entities\\User_Membership.cs",
-              "RelativeToolTip": "Entity\\Entities\\User_Membership.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "JWTBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T10:33:25.964Z",
+              "WhenOpened": "2026-10-23T13:55:10.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Entity\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library Management API\\Entity\\Entities\\User.cs",
-              "RelativeToolTip": "Entity\\Entities\\User.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswBgAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FineBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T10:33:10.698Z",
+              "WhenOpened": "2026-10-23T13:54:52.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BooksBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswGgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T13:54:22.868Z",
               "EditorCaption": ""
             }
           ]

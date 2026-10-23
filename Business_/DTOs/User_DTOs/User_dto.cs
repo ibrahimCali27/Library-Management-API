@@ -1,4 +1,5 @@
 ﻿using Core.Entities;
+using Entity.Entities;
 using Microsoft.Identity.Client.NativeInterop;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,5 @@ namespace Business_.DTOs.User_DTOs
         public DateOnly RegisterDate { get; set; }
         public ICollection<Fine> Fines { get; set; } 
         public ICollection<User_Book> User_Books { get; set; } 
-        public ICollection<User_Membership> User_Memberships { get; set; }
     }
 }

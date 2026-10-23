@@ -38,6 +38,15 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/BCrypt-Net-Next.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/BCrypt-Net-Next.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.13": {
         "type": "package",
         "dependencies": {
@@ -1000,6 +1009,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
           "Entity": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.13",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.13",
@@ -1022,6 +1032,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.13",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.13",
           "Microsoft.EntityFrameworkCore": "10.0.13",
@@ -1080,6 +1091,31 @@
         "lib/net8.0/Azure.Identity.xml",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "BCrypt.Net-Next/4.2.0": {
+      "sha512": "gwLD2KfCuwQesP17aVh4h6lpiMPEVt5Lbpndo0ej903hNUUTtyxt3ARdDjmuydBRTAUICc7OVKVbaOvc6SQYXA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.2.0.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net10.0/BCrypt-Net-Next.dll",
+        "lib/net10.0/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt-Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt-Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt-Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt-Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt-Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.13": {
@@ -2443,7 +2479,9 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "BCrypt.Net-Next >= 4.2.0",
       "DataAccess >= 1.0.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.13",
       "Serilog.Sinks.Console >= 6.1.1",
       "Serilog.Sinks.File >= 7.0.0"
     ]
@@ -2455,11 +2493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\Business_.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Business_.csproj",
       "projectName": "Business_",
-      "projectPath": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\Business_.csproj",
+      "projectPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Business_.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\obj\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2481,8 +2519,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\Library Management API\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -2504,6 +2542,14 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.2.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[10.0.13, )"
+          },
           "Serilog.Sinks.Console": {
             "target": "Package",
             "version": "[6.1.1, )"

@@ -6,11 +6,13 @@ using System.Text;
 
 namespace Business_.DTOs.Fine_DTOs
 {
-    public class CalculateFineDto
+    public class CreateFineDto
     {
         [Required]
         public DateOnly ReturnDate;
         [Required]
         public int UserId;
+        [Required]
+        public int BookId;
     }
 }

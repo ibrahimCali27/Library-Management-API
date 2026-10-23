@@ -21,3 +21,27 @@ C:\Users\user\source\repos\Library Management API\Business_\obj\Debug\net10.0\Bu
 C:\Users\user\source\repos\Library Management API\Business_\obj\Debug\net10.0\refint\Business_.dll
 C:\Users\user\source\repos\Library Management API\Business_\obj\Debug\net10.0\Business_.pdb
 C:\Users\user\source\repos\Library Management API\Business_\obj\Debug\net10.0\ref\Business_.dll
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\DataAccess.deps.json
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\DataAccess.runtimeconfig.json
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Entity.deps.json
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Entity.runtimeconfig.json
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Entity.exe
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\DataAccess.exe
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Business_.deps.json
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Business_.dll
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Business_.pdb
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\DataAccess.dll
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Entity.dll
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\DataAccess.pdb
+C:\Users\user\source\repos\Library-Management-API\Business_\bin\Debug\net10.0\Entity.pdb
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.AssemblyInfo.cs
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.sourcelink.json
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.csproj.Up2Date
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.dll
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\refint\Business_.dll
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\Business_.pdb
+C:\Users\user\source\repos\Library-Management-API\Business_\obj\Debug\net10.0\ref\Business_.dll

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20261020074245_InitialCreate")]
+    [Migration("20261022132114_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -68,15 +68,19 @@ namespace DataAccess.Migrations
                     b.Property<DateTime>("FineDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsReturned")
+                        .HasColumnType("bit");
+
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("User_BookId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("User_BookId")
+                        .IsUnique();
 
                     b.ToTable("Fines");
                 });
@@ -95,9 +99,8 @@ namespace DataAccess.Migrations
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -112,15 +115,14 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CurrentMembershipId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("JWT")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Membership_Type")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -139,7 +141,12 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserType")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CurrentMembershipId");
 
                     b.ToTable("Users");
                 });
@@ -161,7 +168,13 @@ namespace DataAccess.Migrations
                     b.Property<DateOnly>("Borrow_Date")
                         .HasColumnType("date");
 
+                    b.Property<bool>("Is_Returned")
+                        .HasColumnType("bit");
+
                     b.Property<DateOnly>("Return_Date")
+                        .HasColumnType("date");
+
+                    b.Property<DateOnly?>("Returned_Date")
                         .HasColumnType("date");
 
                     b.Property<int>("UserId")
@@ -179,41 +192,26 @@ namespace DataAccess.Migrations
                     b.ToTable("User_Book");
                 });
 
-            modelBuilder.Entity("Core.Entities.User_Membership", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("MembershipId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MembershipId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("User_Membership");
-                });
-
             modelBuilder.Entity("Core.Entities.Fine", b =>
                 {
-                    b.HasOne("Core.Entities.User", "User")
-                        .WithMany("Fines")
-                        .HasForeignKey("UserId")
+                    b.HasOne("Core.Entities.User_Book", "User_Book")
+                        .WithOne("Fine")
+                        .HasForeignKey("Core.Entities.Fine", "User_BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("User_Book");
+                });
+
+            modelBuilder.Entity("Core.Entities.User", b =>
+                {
+                    b.HasOne("Core.Entities.Membership", "CurrentMembership")
+                        .WithMany("User")
+                        .HasForeignKey("CurrentMembershipId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CurrentMembership");
                 });
 
             modelBuilder.Entity("Core.Entities.User_Book", b =>
@@ -235,25 +233,6 @@ namespace DataAccess.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Core.Entities.User_Membership", b =>
-                {
-                    b.HasOne("Core.Entities.Membership", "Membership")
-                        .WithMany("User_Memberships")
-                        .HasForeignKey("MembershipId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Core.Entities.User", "User")
-                        .WithMany("User_Memberships")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Membership");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Core.Entities.Book", b =>
                 {
                     b.Navigation("User_Book");
@@ -261,16 +240,18 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Core.Entities.Membership", b =>
                 {
-                    b.Navigation("User_Memberships");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Core.Entities.User", b =>
                 {
-                    b.Navigation("Fines");
-
                     b.Navigation("User_Books");
+                });
 
-                    b.Navigation("User_Memberships");
+            modelBuilder.Entity("Core.Entities.User_Book", b =>
+                {
+                    b.Navigation("Fine")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

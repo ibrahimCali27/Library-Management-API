@@ -1,4 +1,4 @@
-﻿using Core.Entities;
+﻿using Entity.Entities;
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace Business_.DTOs.User_DTOs

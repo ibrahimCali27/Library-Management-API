@@ -1,12 +1,14 @@
-﻿using Business_.DTOs.User_DTOs;
+﻿using Business_.DTOs.Auth_DTOs;
+using Business_.DTOs.User_DTOs;
 using Core.Entities;
-using Library_Management_API.DTOs.User_DTOs;
+using System.ComponentModel.DataAnnotations;
 namespace Business_.Interfaces
 {
     public interface IUserService
     {
-        Task<bool> CreateUserAsync(CreateUserDto dto);
+        Task<Create_JWT_Dto> CreateUserAsync(CreateUserDto dto);
         Task<bool> UpdateUserAsync(UpdateUserDto dto);
-
+        Task<bool> UpdateMembershipAsync(UpdateMembershipDto dto);
+        Task<Create_JWT_Dto> LoginAsync(LogInDto dto);
     }
 }

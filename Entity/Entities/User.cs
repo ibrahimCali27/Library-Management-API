@@ -1,9 +1,10 @@
-﻿using Microsoft.Identity.Client.NativeInterop;
+﻿using Core.Entities;
+using Microsoft.Identity.Client.NativeInterop;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Entities
+namespace Entity.Entities
 {
     public enum UserType
     {
@@ -23,7 +24,8 @@ namespace Core.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateOnly RegisterDate { get; set; }
+        public int CurrentMembershipId { get; set; }
+        public Membership CurrentMembership { get; set; }
         public ICollection<User_Book> User_Books { get; set; } 
-        public ICollection<User_Membership> User_Memberships { get; set; }
     }
 }

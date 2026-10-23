@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v10.0": {
       "Business_/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
           "DataAccess": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.13",
           "Serilog.Sinks.Console": "6.1.1",
           "Serilog.Sinks.File": "7.0.0"
         },
@@ -39,6 +41,14 @@
           "lib/net8.0/Azure.Identity.dll": {
             "assemblyVersion": "1.17.1.0",
             "fileVersion": "1.1700.125.56903"
+          }
+        }
+      },
+      "BCrypt.Net-Next/4.2.0": {
+        "runtime": {
+          "lib/net10.0/BCrypt-Net-Next.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
           }
         }
       },
@@ -685,6 +695,7 @@
       },
       "DataAccess/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
           "Entity": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.13",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.13",
@@ -705,6 +716,7 @@
       },
       "Entity/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.13",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.13",
           "Microsoft.EntityFrameworkCore": "10.0.13",
@@ -743,6 +755,13 @@
       "sha512": "sha512-MSZkBrctcpiGxs9Cvr2VKKoN6qFLZlP3I6xuCWJ9iTgitI5Rgxtk5gfOSpXPZE3+CJmZ/mnqpQyGyjawFn5Vvg==",
       "path": "azure.identity/1.17.1",
       "hashPath": "azure.identity.1.17.1.nupkg.sha512"
+    },
+    "BCrypt.Net-Next/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gwLD2KfCuwQesP17aVh4h6lpiMPEVt5Lbpndo0ej903hNUUTtyxt3ARdDjmuydBRTAUICc7OVKVbaOvc6SQYXA==",
+      "path": "bcrypt.net-next/4.2.0",
+      "hashPath": "bcrypt.net-next.4.2.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.13": {
       "type": "package",

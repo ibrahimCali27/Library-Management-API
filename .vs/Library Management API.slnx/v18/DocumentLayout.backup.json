@@ -1,18 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Library Management API\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library management api\\business_\\dtos\\fine_dtos\\calculatefinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\dtos\\fine_dtos\\calculatefinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\finebbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\finebbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library management api\\business_\\businesslayer\\bll\\booksbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\booksbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\booksbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library management api\\library management api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library Management API\\Library Management API\\Program.cs",
-              "RelativeDocumentMoniker": "Library Management API\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library Management API\\Library Management API\\Program.cs",
-              "RelativeToolTip": "Library Management API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T07:37:35.164Z",
+              "WhenOpened": "2026-10-23T13:40:23.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JWTBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T13:40:20.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CalculateFineDto.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\DTOs\\Fine_DTOs\\CalculateFineDto.cs",
-              "RelativeDocumentMoniker": "Business_\\DTOs\\Fine_DTOs\\CalculateFineDto.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\DTOs\\Fine_DTOs\\CalculateFineDto.cs",
-              "RelativeToolTip": "Business_\\DTOs\\Fine_DTOs\\CalculateFineDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Title": "FineBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T06:42:03.629Z",
+              "WhenOpened": "2026-10-23T13:40:16.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "BooksBBL.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
               "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
               "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T13:46:11.221Z",
+              "WhenOpened": "2026-10-23T13:39:30.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "Business_\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "Business_\\Interfaces\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T13:39:14.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Library Management API\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Library Management API\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T13:38:53.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Program.cs",
+              "RelativeDocumentMoniker": "Library Management API\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Program.cs",
+              "RelativeToolTip": "Library Management API\\Program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAawD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T13:26:15.125Z",
               "EditorCaption": ""
             }
           ]

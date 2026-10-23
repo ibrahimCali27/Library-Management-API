@@ -34,7 +34,7 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Type = table.Column<int>(type: "int", nullable: false),
                     Borrow_Limit = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<float>(type: "real", nullable: false)
                 },
@@ -52,33 +52,19 @@ namespace DataAccess.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     JWT = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserType = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Membership_Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RegisterDate = table.Column<DateOnly>(type: "date", nullable: false)
+                    RegisterDate = table.Column<DateOnly>(type: "date", nullable: false),
+                    CurrentMembershipId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Fines",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<float>(type: "real", nullable: false),
-                    FineDate = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Fines", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Fines_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
+                        name: "FK_Users_Memberships_CurrentMembershipId",
+                        column: x => x.CurrentMembershipId,
+                        principalTable: "Memberships",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -90,11 +76,13 @@ namespace DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Book_Id = table.Column<int>(type: "int", nullable: false),
-                    BookId = table.Column<int>(type: "int", nullable: false),
                     User_Id = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
                     Borrow_Date = table.Column<DateOnly>(type: "date", nullable: false),
-                    Return_Date = table.Column<DateOnly>(type: "date", nullable: false)
+                    Return_Date = table.Column<DateOnly>(type: "date", nullable: false),
+                    Is_Returned = table.Column<bool>(type: "bit", nullable: false),
+                    Returned_Date = table.Column<DateOnly>(type: "date", nullable: true),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    BookId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -114,36 +102,32 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "User_Membership",
+                name: "Fines",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    MembershipId = table.Column<int>(type: "int", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    User_BookId = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<float>(type: "real", nullable: false),
+                    FineDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsReturned = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User_Membership", x => x.Id);
+                    table.PrimaryKey("PK_Fines", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_User_Membership_Memberships_MembershipId",
-                        column: x => x.MembershipId,
-                        principalTable: "Memberships",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_User_Membership_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
+                        name: "FK_Fines_User_Book_User_BookId",
+                        column: x => x.User_BookId,
+                        principalTable: "User_Book",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Fines_UserId",
+                name: "IX_Fines_User_BookId",
                 table: "Fines",
-                column: "UserId");
+                column: "User_BookId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_User_Book_BookId",
@@ -156,14 +140,9 @@ namespace DataAccess.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_User_Membership_MembershipId",
-                table: "User_Membership",
-                column: "MembershipId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_User_Membership_UserId",
-                table: "User_Membership",
-                column: "UserId");
+                name: "IX_Users_CurrentMembershipId",
+                table: "Users",
+                column: "CurrentMembershipId");
         }
 
         /// <inheritdoc />
@@ -176,16 +155,13 @@ namespace DataAccess.Migrations
                 name: "User_Book");
 
             migrationBuilder.DropTable(
-                name: "User_Membership");
-
-            migrationBuilder.DropTable(
                 name: "Books");
 
             migrationBuilder.DropTable(
-                name: "Memberships");
+                name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Memberships");
         }
     }
 }

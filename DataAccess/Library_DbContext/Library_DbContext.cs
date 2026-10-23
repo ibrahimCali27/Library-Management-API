@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Entity.Entities;
 namespace DataAccess.Context
 {
     public class DBContext : DbContext {
@@ -17,6 +18,10 @@ namespace DataAccess.Context
         public DbSet<Membership> Memberships { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<User_Book> User_Book { get; set; }
-        public DbSet<User_Membership> User_Membership { get; set; }
+
+        public async Task FindAsync(Func<object, bool> value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

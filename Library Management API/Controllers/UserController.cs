@@ -1,7 +1,8 @@
 ﻿using Business_.BusinessLayer.BLL;
 using Business_.DTOs.User_DTOs;
 using Business_.Interfaces;
-using Core.Entities;
+using Entity.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace Library_Management_API.Controllers
 {
@@ -15,27 +16,37 @@ namespace Library_Management_API.Controllers
         {
             _userService = userService;
         }
-
-        [HttpPost]
-        public async Task<IActionResult> CreateUserAsync(CreateUserDto dto)
+        [AllowAnonymous]
+        [HttpPost("Create")]
+        public async Task<IActionResult> CreateUser(CreateUserDto dto)
         {
             var result = await _userService.CreateUserAsync(dto);
+            
+            return Ok(result);
+        }
+        [AllowAnonymous]
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login(LogInDto dto)
+        {
+            var result = await _userService.LoginAsync(dto);
+
+            return Ok(result);
+        }
+        [Authorize]
+        [HttpPut("Update-User")]
+        public async Task<IActionResult> UpdateUserAsync(UpdateUserDto dto)
+        {
+            var result = await _userService.UpdateUserAsync(dto);
 
             return result ? Ok() : BadRequest();
         }
-        [HttpPost]
-        public async Task<IActionResult> BorrowBookAsync(CreateUserDto dto)
+        [Authorize]
+        [HttpPut("Update-Membership")]
+        public async Task<IActionResult> UpdateMembershipAsync(UpdateMembershipDto dto)
         {
-            if (dto.UserType == UserType.Admin)
-            {
-                var result = await _userService.CreateUserAsync(dto);
-                return result ? Ok() : BadRequest();
-            }
-            else
-            {
-                throw new Exception("Only admins allowed to do this.");
-            }
-            
+            var result = await _userService.UpdateMembershipAsync(dto);
+
+            return result ? Ok() : BadRequest();
         }
     }
 }

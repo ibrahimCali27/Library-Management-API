@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Entities
+namespace Entity.Entities
 {
     public enum MembershipType
     {
@@ -16,7 +16,7 @@ namespace Core.Entities
         public MembershipType Type { get; set; }
         public int Borrow_Limit { get; set; }
         public float Price { get; set; }
-        public ICollection<User_Membership> User_Memberships { get; set; }
+        public ICollection<User> User { get; set; }
 
     }
 }

@@ -11,6 +11,6 @@ namespace Business_.Interfaces
         Task<bool> ReturnBookAsync(ReturnBooksDto dto);
         Task<bool> AddBookAsync(AddBooksDto dto);
         Task<bool> DeleteBookAsync(DeleteBooksDto dto);
-
+        Task<bool> UpdateBookAsync(UpdateBookDto dto);
     }
 }

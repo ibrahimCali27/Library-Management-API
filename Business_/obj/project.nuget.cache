@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+fE3IVZsWiY=",
+  "dgSpecHash": "0/y/WD8V/Dk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\Library Management API\\Business_\\Business_.csproj",
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Business_.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.13\\microsoft.aspnetcore.authentication.jwtbearer.10.0.13.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\10.0.13\\microsoft.aspnetcore.cryptography.internal.10.0.13.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\10.0.13\\microsoft.aspnetcore.cryptography.keyderivation.10.0.13.nupkg.sha512",
