@@ -18,10 +18,5 @@ namespace DataAccess.Context
         public DbSet<Membership> Memberships { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<User_Book> User_Book { get; set; }
-
-        public async Task FindAsync(Func<object, bool> value)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -13,7 +13,7 @@ namespace Business_.BusinessLayer.BLL
 {
     public class FineService(DBContext context) : IFineService
     {
-        private DBContext? _context = context;
+        private readonly DBContext? _context = context;
         private readonly ILogger<BookService> _logger;
         public async Task<bool> CreateFineAsync()
         {
@@ -85,6 +85,21 @@ namespace Business_.BusinessLayer.BLL
 
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<List<Fine>> ViewFineAsync(ViewFineDto dto)
+        {
+            var fines = await _context.Fines
+                .Include(f => f.User_Book)
+                .Where(f => f.User_Book != null &&
+            f.User_Book.User_Id == dto.Id).ToListAsync();
+
+            if (fines.Count == 0)
+            {
+                throw new Exception("No fines found for this user.");
+            }
+
+            return fines;
         }
     }
 }

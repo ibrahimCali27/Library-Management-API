@@ -7,14 +7,10 @@ namespace Library_Management_API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class FineController : ControllerBase
+    public class FineController(FineService fineService) : ControllerBase
     {
-        private readonly FineService _fineService;
+        private readonly FineService _fineService = fineService;
 
-        public FineController(FineService fineService)
-        {
-            _fineService = fineService;
-        }
         [Authorize(Roles = "Admin")]
         [HttpPost("create-fine")]
         public async Task<IActionResult> CreateFine()
@@ -43,6 +39,17 @@ namespace Library_Management_API.Controllers
                 return BadRequest();
 
             return Ok("Fines created successfully.");
+        }
+        [Authorize]
+        [HttpPost("view-fine")]
+        public async Task<IActionResult> ViewFine([FromBody] ViewFineDto dto)
+        {
+            var fines = await _fineService.ViewFineAsync(dto);
+
+            if (fines.Count == 0)
+                return NotFound("No fines found for this user.");
+
+            return Ok(fines);
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Business_.BusinessLayer.BLL;
 using Business_.DTOs.Book_DTOs;
+using Business_.DTOs.Fine_DTOs;
+using Business_.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,18 +9,20 @@ namespace Library_Management_API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BookController:ControllerBase
+    public class BookController : ControllerBase
     {
-        private readonly BookService _BookService;
-        public BookController(BookService BookService)
+        private readonly IBookService _BookService;
+
+        public BookController(IBookService BookService)
         {
             _BookService = BookService;
         }
+
         [Authorize]
-        [HttpPut("borrow-book")]
-        public async Task<IActionResult> BorrowBookAsync(BorrowBooksDto dto)
+        [HttpPut("{UserId}/borrow-book/{BookId}")]
+        public async Task<IActionResult> BorrowBookAsync(int UserId,int BookId,BorrowBooksDto dto)
         {
-            var result = await _BookService.BorrowBookAsync(dto);
+            var result = await _BookService.BorrowBookAsync(UserId,BookId,dto);
 
             if (!result)
                 return BadRequest();
@@ -40,14 +44,18 @@ namespace Library_Management_API.Controllers
         /// Admin
         /// </summary>
         [Authorize(Roles = "Admin")]
-        [HttpPost]
+        [HttpPost("add-book")]
         public async Task<IActionResult> AddBook(AddBooksDto dto)
         {
-            await _BookService.AddBookAsync(dto);
-            return Ok();
+            var result = await _BookService.AddBookAsync(dto);
+
+            if (!result)
+                return BadRequest();
+
+            return Ok("Book added successfully.");
         }
         [Authorize(Roles = "Admin")]
-        [HttpPut]
+        [HttpDelete("delete-book")]
         public async Task<IActionResult> DeleteBookAsync(DeleteBooksDto dto)
         {
             var result = await _BookService.DeleteBookAsync(dto);
@@ -58,15 +66,27 @@ namespace Library_Management_API.Controllers
             return Ok("Book deleted successfully.");
         }
         [Authorize(Roles = "Admin")]
-        [HttpPut]
-        public async Task<IActionResult> UpdateBooksAsync(UpdateBookDto dto)
+        [HttpPost("update-book/{id}")]
+        public async Task<IActionResult> UpdateBooksAsync(int id,UpdateBookDto dto)
         {
-            var result = await _BookService.UpdateBookAsync(dto);
+            Console.WriteLine(dto.Name);
+            var result = await _BookService.UpdateBookAsync(id,dto);
 
             if (!result)
                 return BadRequest();
 
             return Ok("Book updated successfully.");
+        }
+        [Authorize]
+        [HttpGet("view-books")]
+        public async Task<IActionResult> ViewBook(ViewBookDto dto)
+        {
+            var Books = await _BookService.ViewBookAsync(dto);
+
+            if (Books.Count != 0)
+                return Ok(Books);
+
+            return NotFound("No books found for this genre.");
         }
     }
 }

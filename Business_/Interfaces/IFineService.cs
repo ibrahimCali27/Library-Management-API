@@ -5,10 +5,11 @@ using Business_.DTOs.Fine_DTOs;
 using Core.Entities;
 namespace Business_.Interfaces
 {
-    internal interface IFineService
+    public interface IFineService
     {
         Task<bool> CreateFineAsync();
         Task<bool> UpdateFineAsync();
         Task<bool> PayFineAsync(PayFineDto dto);
+        Task<List<Fine>> ViewFineAsync(ViewFineDto dto);
     }
 }

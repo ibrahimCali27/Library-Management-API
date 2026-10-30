@@ -4,9 +4,11 @@ using Business_.Interfaces;
 using Entity.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 namespace Library_Management_API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
@@ -47,6 +49,24 @@ namespace Library_Management_API.Controllers
             var result = await _userService.UpdateMembershipAsync(dto);
 
             return result ? Ok() : BadRequest();
+        }
+        [Authorize]
+        [HttpDelete("Delete-User")]
+        public async Task<IActionResult> DeleteUserAsync(DeleteUserDto dto)
+        {
+            var role = User.FindFirst(ClaimTypes.Role)?.Value;
+
+            return Ok(new
+            {
+                Role = role,
+                IsAdmin = User.IsInRole("Admin")
+            });
+        }
+        [Authorize(Roles ="Admin")]
+        [HttpGet("test")]
+        public IActionResult Test()
+        {
+            return Ok("API çalışıyor");
         }
     }
 }

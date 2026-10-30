@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20261022132114_InitialCreate")]
+    [Migration("20261027105720_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -85,72 +85,6 @@ namespace DataAccess.Migrations
                     b.ToTable("Fines");
                 });
 
-            modelBuilder.Entity("Core.Entities.Membership", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Borrow_Limit")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Price")
-                        .HasColumnType("real");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Memberships");
-                });
-
-            modelBuilder.Entity("Core.Entities.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CurrentMembershipId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JWT")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateOnly>("RegisterDate")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserType")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CurrentMembershipId");
-
-                    b.ToTable("Users");
-                });
-
             modelBuilder.Entity("Core.Entities.User_Book", b =>
                 {
                     b.Property<int>("Id")
@@ -192,6 +126,71 @@ namespace DataAccess.Migrations
                     b.ToTable("User_Book");
                 });
 
+            modelBuilder.Entity("Entity.Entities.Membership", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Borrow_Limit")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("real");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Memberships");
+                });
+
+            modelBuilder.Entity("Entity.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MembershipId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MembershipType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateOnly>("RegisterDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MembershipId");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Core.Entities.Fine", b =>
                 {
                     b.HasOne("Core.Entities.User_Book", "User_Book")
@@ -203,17 +202,6 @@ namespace DataAccess.Migrations
                     b.Navigation("User_Book");
                 });
 
-            modelBuilder.Entity("Core.Entities.User", b =>
-                {
-                    b.HasOne("Core.Entities.Membership", "CurrentMembership")
-                        .WithMany("User")
-                        .HasForeignKey("CurrentMembershipId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("CurrentMembership");
-                });
-
             modelBuilder.Entity("Core.Entities.User_Book", b =>
                 {
                     b.HasOne("Core.Entities.Book", "Book")
@@ -222,7 +210,7 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Entities.User", "User")
+                    b.HasOne("Entity.Entities.User", "User")
                         .WithMany("User_Books")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -233,25 +221,36 @@ namespace DataAccess.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Entity.Entities.User", b =>
+                {
+                    b.HasOne("Entity.Entities.Membership", "Membership")
+                        .WithMany("User")
+                        .HasForeignKey("MembershipId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Membership");
+                });
+
             modelBuilder.Entity("Core.Entities.Book", b =>
                 {
                     b.Navigation("User_Book");
-                });
-
-            modelBuilder.Entity("Core.Entities.Membership", b =>
-                {
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Core.Entities.User", b =>
-                {
-                    b.Navigation("User_Books");
                 });
 
             modelBuilder.Entity("Core.Entities.User_Book", b =>
                 {
                     b.Navigation("Fine")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Entity.Entities.Membership", b =>
+                {
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Entity.Entities.User", b =>
+                {
+                    b.Navigation("User_Books");
                 });
 #pragma warning restore 612, 618
         }

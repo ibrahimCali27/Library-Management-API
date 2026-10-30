@@ -185,6 +185,7 @@ C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\D
 C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\DataAccess.pdb
 C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Azure.Core.dll
 C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\BCrypt-Net-Next.dll
 C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Humanizer.dll
 C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -353,4 +354,11 @@ C:\Users\user\source\repos\Library-Management-API\DataAccess\obj\Debug\net10.0\r
 C:\Users\user\source\repos\Library-Management-API\DataAccess\obj\Debug\net10.0\DataAccess.pdb
 C:\Users\user\source\repos\Library-Management-API\DataAccess\obj\Debug\net10.0\DataAccess.genruntimeconfig.cache
 C:\Users\user\source\repos\Library-Management-API\DataAccess\obj\Debug\net10.0\ref\DataAccess.dll
-C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\BCrypt-Net-Next.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.AspNetCore.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+C:\Users\user\source\repos\Library-Management-API\DataAccess\bin\Debug\net10.0\Serilog.Sinks.File.dll

@@ -30,22 +30,36 @@ namespace Business_.BusinessLayer.BLL
             {
                 throw new InvalidOperationException("Password must be at least 8 characters.");
             }
+            var membership = await _context.Memberships
+    .FirstOrDefaultAsync(x => x.Type == dto.MembershipType);
 
+            if (membership == null)
+            {
+                throw new Exception("Membership not found.");
+            }
             var user = new User
             {
+                UserType =dto.UserType,
                 Name = dto.Name,
                 Surname = dto.Surname,
                 Email = dto.Email,
-                Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
-            };
+                Password = BCrypt.Net.BCrypt.HashPassword(dto.Password),
 
+                MembershipId = membership.Id,
+
+                RegisterDate = DateOnly.FromDateTime(DateTime.Now)
+            };
+            Console.WriteLine(dto.MembershipType);
+            Console.WriteLine(user.MembershipId);
             _context.Users.Add(user);
+            await _context.SaveChangesAsync();
             var token = _jwtService.GenerateToken(user);
             return new Create_JWT_Dto
             {
                 Token = token,
                 Email = user.Email
             };
+            
         }
         public async Task<bool> UpdateUserAsync(UpdateUserDto dto)
         {
@@ -85,8 +99,10 @@ namespace Business_.BusinessLayer.BLL
 
         public async Task<bool> UpdateMembershipAsync(UpdateMembershipDto dto)
         {
-            var User = await _context.Users.Include(x => x.CurrentMembership).FirstOrDefaultAsync(x => x.Id == dto.UserId);
-            
+            var User = await _context.Users
+    .Include(x => x.Membership)
+    .FirstOrDefaultAsync(x => x.Id == dto.UserId);
+
             if (User == null)
             {
                 throw new Exception("User not found.");
@@ -105,12 +121,12 @@ namespace Business_.BusinessLayer.BLL
             
             int NewBorrowLimit = targetMembership.Borrow_Limit;
             
-            if(borrowedBooksCount > NewBorrowLimit)
+            if(!User.Membership.IsUnlimited && borrowedBooksCount > NewBorrowLimit)
             {
                 throw new Exception("You cannot switch memberships.");
             }
-            
-            User.CurrentMembership = targetMembership;
+
+            User.MembershipId = targetMembership.Id;
             _context.Users.Update(User);
             
             return await _context.SaveChangesAsync() > 0;
@@ -141,6 +157,17 @@ namespace Business_.BusinessLayer.BLL
                 Email = user.Email,
                 Token = token
             };
+        }
+
+        public async Task<bool> DeleteUserAsync(DeleteUserDto dto)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserType == dto.Id) ?? throw new Exception("User not found.");
+            
+            Console.WriteLine(dto.Id);
+            Console.WriteLine((int)dto.Id);
+
+            _context.Users.Remove(user);
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

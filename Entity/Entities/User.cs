@@ -16,7 +16,6 @@ namespace Entity.Entities
         public int Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string JWT { get; set; }
         public UserType UserType { get; set; }
         /// <summary>
         /// Değiştirilebilir kısımlar:Name,Surname,Password
@@ -24,8 +23,8 @@ namespace Entity.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateOnly RegisterDate { get; set; }
-        public int CurrentMembershipId { get; set; }
-        public Membership CurrentMembership { get; set; }
+        public int MembershipId { get; set; }
+        public Membership Membership { get; set; }
         public ICollection<User_Book> User_Books { get; set; } 
     }
 }

@@ -1,8 +1,34 @@
 [
   {
     "ContainingType": "Library_Management_API.Controllers.BookController",
+    "Method": "BorrowBookAsync",
+    "RelativePath": "api/Book/{UserId}/borrow-book/{BookId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "BookId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Business_.DTOs.Book_DTOs.BorrowBooksDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_API.Controllers.BookController",
     "Method": "AddBook",
-    "RelativePath": "api/Book",
+    "RelativePath": "api/Book/add-book",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,46 +44,14 @@
   {
     "ContainingType": "Library_Management_API.Controllers.BookController",
     "Method": "DeleteBookAsync",
-    "RelativePath": "api/Book",
-    "HttpMethod": "PUT",
+    "RelativePath": "api/Book/delete-book",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
         "Type": "Business_.DTOs.Book_DTOs.DeleteBooksDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Library_Management_API.Controllers.BookController",
-    "Method": "UpdateBooksAsync",
-    "RelativePath": "api/Book",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "Business_.DTOs.Book_DTOs.UpdateBookDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Library_Management_API.Controllers.BookController",
-    "Method": "BorrowBookAsync",
-    "RelativePath": "api/Book/borrow-book",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "Business_.DTOs.Book_DTOs.BorrowBooksDto",
         "IsRequired": true
       }
     ],
@@ -74,6 +68,43 @@
       {
         "Name": "dto",
         "Type": "Business_.DTOs.Book_DTOs.ReturnBooksDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_API.Controllers.BookController",
+    "Method": "UpdateBooksAsync",
+    "RelativePath": "api/Book/update-book/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Business_.DTOs.Book_DTOs.UpdateBookDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_API.Controllers.BookController",
+    "Method": "ViewBook",
+    "RelativePath": "api/Book/view-books",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Business_.DTOs.Book_DTOs.ViewBookDto",
         "IsRequired": true
       }
     ],
@@ -110,6 +141,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Library_Management_API.Controllers.FineController",
+    "Method": "ViewFine",
+    "RelativePath": "api/Fine/view-fine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Business_.DTOs.Fine_DTOs.ViewFineDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Library_Management_API.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User/Create",
@@ -120,6 +167,22 @@
       {
         "Name": "dto",
         "Type": "Business_.DTOs.User_DTOs.CreateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_API.Controllers.UserController",
+    "Method": "DeleteUserAsync",
+    "RelativePath": "api/User/Delete-User",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Business_.DTOs.User_DTOs.DeleteUserDto",
         "IsRequired": true
       }
     ],
@@ -139,6 +202,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_API.Controllers.UserController",
+    "Method": "Test",
+    "RelativePath": "api/User/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

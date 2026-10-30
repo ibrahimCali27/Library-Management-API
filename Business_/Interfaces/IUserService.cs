@@ -10,5 +10,6 @@ namespace Business_.Interfaces
         Task<bool> UpdateUserAsync(UpdateUserDto dto);
         Task<bool> UpdateMembershipAsync(UpdateMembershipDto dto);
         Task<Create_JWT_Dto> LoginAsync(LogInDto dto);
+        Task<bool> DeleteUserAsync(DeleteUserDto dto);
     }
 }

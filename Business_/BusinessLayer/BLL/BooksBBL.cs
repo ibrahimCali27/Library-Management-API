@@ -14,11 +14,11 @@ namespace Business_.BusinessLayer.BLL
         private readonly ILogger<BookService> _logger;
         private readonly DBContext _context = context;
 
-        public async Task<bool> BorrowBookAsync(BorrowBooksDto dto)
+        public async Task<bool> BorrowBookAsync(int UserId,int BookId,BorrowBooksDto dto)
         {
-            var book = await _context.Books
-        .FirstOrDefaultAsync(x => x.Id == dto.BookId);
 
+            var book = await _context.Books.FindAsync(BookId);
+            var user = await _context.Users.FindAsync(UserId);
             if (book == null)
             {
                 throw new Exception("This book doesn't exist.");
@@ -30,8 +30,8 @@ namespace Business_.BusinessLayer.BLL
             book.Count--;
             var BorrowBook = new User_Book
             {
-                User_Id = dto.UserId,
-                Book_Id = dto.BookId,
+                User_Id = UserId,
+                Book_Id = BookId,
                 Borrow_Date = DateOnly.FromDateTime(DateTime.Now),
                 Return_Date = DateOnly.FromDateTime(DateTime.Now).AddDays(7)
             };
@@ -65,13 +65,6 @@ namespace Business_.BusinessLayer.BLL
         //Bu kısımda admin rolü gerekmektedir.
         public async Task<bool> AddBookAsync(AddBooksDto dto)
         {
-            var user = await _context.Users
-                .FirstOrDefaultAsync(x => x.Id == dto.UserId);
-
-            if (user == null)
-            {
-                throw new Exception("User not found.");
-            }  
             var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Name == dto.Name);
             if (ExistingBook != null)
             {
@@ -93,37 +86,49 @@ namespace Business_.BusinessLayer.BLL
 
         public async Task<bool> DeleteBookAsync(DeleteBooksDto dto)
         {
-            var user = await _context.Users
-                .FirstOrDefaultAsync(x => x.Id == dto.UserId);
-
-            if (user == null)
-            {
-                throw new Exception("User not found.");
-            }
-            var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Id == dto.BookId);
-            if (ExistingBook == null) 
-            {
-                throw new Exception("This book doesn't exist.");
-            } 
+            var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Id == dto.BookId) ?? throw new Exception("This book doesn't exist.");
             _context.Books.Remove(ExistingBook);  
             return await _context.SaveChangesAsync() > 0;
         }
-        public async Task<bool> UpdateBookAsync(UpdateBookDto dto)
+        public async Task<bool> UpdateBookAsync(int id,UpdateBookDto dto)
         {
-            var User = await _context.Users.FirstOrDefaultAsync(x => x.Id == dto.User_Id);
-            if (User == null) { }//Error
+            var ToBeUpdatedBook = await _context.Books.FindAsync(id);
+            if (ToBeUpdatedBook == null)
+            {
+                throw new Exception("This book doesn't exist.");
+            }
+            bool noChanges =
+            ToBeUpdatedBook.Name == dto.Name &&
+            ToBeUpdatedBook.Writer == dto.Writer &&
+            ToBeUpdatedBook.Genre == dto.Genre &&
+            ToBeUpdatedBook.Count == dto.Count &&
+            ToBeUpdatedBook.BookISMB == dto.BookISMB;
 
-            var BeUpdatedBook = await _context.Books.FirstOrDefaultAsync(y => y.Id == dto.Book_Id);
-            if (BeUpdatedBook == null) { }//Error
-
-            BeUpdatedBook.Name = dto.Name;
-            BeUpdatedBook.Writer = dto.Writer;
-            BeUpdatedBook.Genre = dto.Genre;
-            BeUpdatedBook.Count = dto.Count;
-            BeUpdatedBook.BookISMB = dto.BookISMB;
-
+            if (noChanges)
+            {
+                throw new Exception("This book is the exact same.");
+            }
+            if(dto.Count < 0) { throw new Exception("Kitap sayısı negatif olamaz."); }
+            ToBeUpdatedBook.Name = dto.Name;
+            ToBeUpdatedBook.Writer = dto.Writer;
+            ToBeUpdatedBook.Genre = dto.Genre;
+            ToBeUpdatedBook.Count = dto.Count;
+            ToBeUpdatedBook.BookISMB = dto.BookISMB;
             return await _context.SaveChangesAsync() > 0;
         }
 
+        public async Task<List<Book>> ViewBookAsync(ViewBookDto dto)
+        {
+            var books = await _context.Books
+                .Where(b => b.Genre == dto.Genre)
+                .ToListAsync();
+
+            if (books.Count == 0)
+            {
+                throw new Exception("No books found for this genre.");
+            }
+
+            return books;
+        }
     }
 }

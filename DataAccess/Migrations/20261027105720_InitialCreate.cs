@@ -51,19 +51,19 @@ namespace DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    JWT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserType = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RegisterDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    CurrentMembershipId = table.Column<int>(type: "int", nullable: false)
+                    MembershipType = table.Column<int>(type: "int", nullable: false),
+                    MembershipId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Users_Memberships_CurrentMembershipId",
-                        column: x => x.CurrentMembershipId,
+                        name: "FK_Users_Memberships_MembershipId",
+                        column: x => x.MembershipId,
                         principalTable: "Memberships",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -140,9 +140,9 @@ namespace DataAccess.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_CurrentMembershipId",
+                name: "IX_Users_MembershipId",
                 table: "Users",
-                column: "CurrentMembershipId");
+                column: "MembershipId");
         }
 
         /// <inheritdoc />

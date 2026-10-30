@@ -9,12 +9,6 @@ namespace Business_.DTOs.Book_DTOs
     public class BorrowBooksDto
     {
         [Required]
-        public int UserId { get; set; }
-        [Required]
-        public int BookId { get; set; }
-        [Required]
         public int Count { get; set; }
-        
-
     }
 }

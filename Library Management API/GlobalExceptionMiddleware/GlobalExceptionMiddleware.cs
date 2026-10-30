@@ -29,10 +29,15 @@
                 context.Response.StatusCode = 500;
                 context.Response.ContentType = "application/json";
 
-                await context.Response.WriteAsJsonAsync(new
+                var response = new
                 {
-                    Message = ex.Message
-                });
+                    Message = "An unexpected error occurred.",
+#if DEBUG
+                    Detail = ex.Message
+#endif
+                };
+
+                await context.Response.WriteAsJsonAsync(response);
             }
         }
     }

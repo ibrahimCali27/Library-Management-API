@@ -184,14 +184,22 @@ C:\Users\user\source\repos\Library Management API\Library Management API\bin\Deb
 C:\Users\user\source\repos\Library Management API\Library Management API\obj\Debug\net10.0\Library Management API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\source\repos\Library Management API\Library Management API\bin\Debug\net10.0\Serilog.Sinks.Console.dll
 C:\Users\user\source\repos\Library Management API\Library Management API\bin\Debug\net10.0\Serilog.Sinks.File.dll
-C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\appsettings.Development.json
-C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\appsettings.json
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.AssemblyInfo.cs
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.sourcelink.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\DataAccess.deps.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\DataAccess.runtimeconfig.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Entity.deps.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Entity.runtimeconfig.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Entity.exe
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\DataAccess.exe
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\appsettings.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Library Management API.staticwebassets.endpoints.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Library Management API.exe
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Library Management API.deps.json
@@ -200,6 +208,7 @@ C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Deb
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Library Management API.pdb
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Azure.Core.dll
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\BCrypt-Net-Next.dll
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Humanizer.dll
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -346,15 +355,6 @@ C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Deb
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Business_.pdb
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\DataAccess.pdb
 C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Entity.pdb
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.csproj.AssemblyReference.cache
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\rpswa.dswa.cache.json
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.AssemblyInfoInputs.cache
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.AssemblyInfo.cs
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.sourcelink.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -371,4 +371,10 @@ C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Deb
 C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.pdb
 C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.genruntimeconfig.cache
 C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\ref\Library Management API.dll
-C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\BCrypt-Net-Next.dll
+C:\Users\user\source\repos\Library-Management-API\Library Management API\obj\Debug\net10.0\Library Management API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Serilog.AspNetCore.dll
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+C:\Users\user\source\repos\Library-Management-API\Library Management API\bin\Debug\net10.0\Serilog.Sinks.Debug.dll

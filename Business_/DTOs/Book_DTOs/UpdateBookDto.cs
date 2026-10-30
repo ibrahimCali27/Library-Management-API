@@ -7,10 +7,6 @@ namespace Business_.DTOs.Book_DTOs
 {
     public class UpdateBookDto
     {
-        [Required]
-        public int User_Id;
-        [Required]
-        public int Book_Id;
         public string Name { get; set; }
         public string Writer { get; set; }
         public string Genre { get; set; }
