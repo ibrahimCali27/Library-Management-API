@@ -1,7 +1,7 @@
 ﻿using Business_.DTOs.Fine_DTOs;
 using Business_.Interfaces;
-using Core.Entities;
-using DataAccess.Context;
+using DataAccess.Library_DbContext;
+using Entity.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -11,49 +11,56 @@ using System.Security.Permissions;
 using System.Text;
 namespace Business_.BusinessLayer.BLL
 {
-    public class FineService(DBContext context) : IFineService
+    public class FineService(DBContext context,ILogger<FineService>logger) : IFineService
     {
-        private readonly DBContext? _context = context;
-        private readonly ILogger<BookService> _logger;
+        private readonly DBContext _context = context;
+        private readonly ILogger<FineService> _logger = logger;
+
         public async Task<bool> CreateFineAsync()
         {
-            var borrowings = _context.User_Book.ToList();
-
+            var borrowings = await _context.User_Book.ToListAsync();
+            bool IsFineCreated = false;
             foreach (var borrowing in borrowings)
             {
                 int dayDifference = DateOnly.FromDateTime(DateTime.Now).DayNumber - borrowing.Return_Date.DayNumber;
-                if (!borrowing.Is_Returned && dayDifference == 1)
+                if (!borrowing.Is_Returned && dayDifference > 0)
                 {
                     bool fineExists = await _context.Fines
                 .AnyAsync(f => f.User_BookId == borrowing.Id);
 
                     if (!fineExists)
                     {
+                        IsFineCreated = true;
                         var fine = new Fine
                         {
                             User_BookId = borrowing.Id,
                             Price = 2.5f,
                             FineDate = DateTime.Now,
-                            IsReturned = false
+                            IsReturned = false,
+                            IsPaid = false
                         };
 
                         _context.Fines.Add(fine);
                     }
                 }
             }
+            if(IsFineCreated == false){
+                _logger.LogInformation("Ceza yaratılmaya gerek görülmedi.");
+                return false;
+            }
             return await _context.SaveChangesAsync() > 0;
         }
-        public async Task<bool> PayFineAsync(PayFineDto dto)
+        public async Task<bool> PayFineAsync(int UserId,int UserBookId,PayFineDto dto)
         {
-            var FineToPay = await _context.Fines.FirstOrDefaultAsync(x=>x.User_BookId == dto.Id);
-            
-            if( FineToPay == null) { throw new Exception("This fine doesn't exist."); }
-            if (FineToPay.User_Book.User_Id != dto.User_Id) { throw new Exception("This isn't your fine."); }
-            if(FineToPay.Price > dto.Payment) { throw new Exception("Not enough money."); }
-            
-            FineToPay.User_Book.Is_Returned = true;
+            var FineToPay = await _context.Fines.Include(x => x.User_Book).FirstOrDefaultAsync(x =>x.User_BookId == UserBookId && x.User_Book.UserId == UserId);
+
+            if(FineToPay == null) { _logger.LogWarning("Bu ceza burada yok."); return false; }
+            if(FineToPay.Price > dto.Payment) { _logger.LogWarning("Yetersiz bakiye."); return false; }
+
+            if (!FineToPay.User_Book.Is_Returned) { _logger.LogWarning("Önce kitabı iade etmen gerek."); return false; }
+
             FineToPay.User_Book.Returned_Date = DateOnly.FromDateTime(DateTime.Now);
-            FineToPay.IsReturned = true;
+            FineToPay.IsPaid = true;
             
             return await _context.SaveChangesAsync() > 0;
         }
@@ -87,19 +94,19 @@ namespace Business_.BusinessLayer.BLL
             return true;
         }
 
-        public async Task<List<Fine>> ViewFineAsync(ViewFineDto dto)
+        public async Task<List<ViewFineOutputDto>> ViewFineAsync(ViewFineDto dto)
         {
-            var fines = await _context.Fines
-                .Include(f => f.User_Book)
-                .Where(f => f.User_Book != null &&
-            f.User_Book.User_Id == dto.Id).ToListAsync();
-
-            if (fines.Count == 0)
-            {
-                throw new Exception("No fines found for this user.");
-            }
-
-            return fines;
+            return await _context.Fines
+                .Where(f => f.User_Book.UserId == dto.Id)
+                .Select(f => new ViewFineOutputDto
+                {
+                    Id = f.Id,
+                    Price = f.Price,
+                    IsReturned = f.IsReturned,
+                    User_BookId = f.User_BookId,
+                    IsPaid = f.IsPaid
+                })
+                .ToListAsync();
         }
     }
 }

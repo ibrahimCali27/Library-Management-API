@@ -1,15 +1,16 @@
 using Business_.BusinessLayer.BLL;
 using Business_.Interfaces;
-using DataAccess.Context;
+using DataAccess.Library_DbContext;
 using Library_Management_API.GlobalExceptionMiddleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using Serilog.AspNetCore;
+using Serilog.Sinks.File;
 using System.Net.Http.Headers;
 using System.Text;
-using Serilog.Sinks.File;
-using Serilog.AspNetCore;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
@@ -24,6 +25,29 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DBContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddControllers();
 builder.Host.UseSerilog();
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.InvalidModelStateResponseFactory = context =>
+    {
+        var logger = context.HttpContext.RequestServices
+            .GetRequiredService<ILogger<Program>>();
+
+        foreach (var state in context.ModelState)
+        {
+            foreach (var error in state.Value.Errors)
+            {
+                logger.LogWarning(
+                    "Validation failed. Field: {Field}, Error: {Error}",
+                    state.Key,
+                    error.ErrorMessage);
+            }
+        }
+
+        return new BadRequestObjectResult(context.ModelState);
+    };
+});
+
 builder.Services.AddAuthentication(
     JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
@@ -55,7 +79,7 @@ builder.Services.AddAuthentication(
             Console.WriteLine("TOKEN:");
             Console.WriteLine(context.Token ?? "NULL");
             Console.WriteLine(
-        context.Request.Headers["Authorization"]);
+        context.Request.Headers.Authorization);
 
             return Task.CompletedTask;
         }
@@ -82,6 +106,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -1,8 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Entities
+namespace Entity.Entities
 {
     public class Fine
     {
@@ -12,6 +13,7 @@ namespace Core.Entities
         public float Price { get; set; }
         public DateTime FineDate { get; set; }
         public bool IsReturned { get; set; }
+        public bool IsPaid { get; set; }
         
 
     }

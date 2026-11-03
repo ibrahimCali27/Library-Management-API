@@ -1,0 +1,44 @@
+﻿@Library_Management_API_HostAddress = https://localhost:7156
+@Token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhYmNkZWZnaGlAaG90bWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzkzNzEwNTkxLCJpc3MiOiJodHRwczovL2FwaS5pYnJhaGltY2FsaS5jb20iLCJhdWQiOiJodHRwczovL3d3dy5pYnJhaGltY2FsaS5jb20ifQ.42wnnLpWlCKkRb2gkUz_vKJL-AZ-v5VTAlypTM9THrM
+POST {{Library_Management_API_HostAddress}}/api/User/Create
+Content-Type: application/json
+{
+  "UserType":0,
+  "Name":"İbrahim",
+  "Surname":"Çalı",
+  "Email":"abcdefghih@hotmail.com",
+  "Password":"123",
+  "MembershipType":2
+}
+###
+POST {{Library_Management_API_HostAddress}}/api/User/LogIn
+Content-Type:application/json
+{
+  "Email":"abcdefghi@hotmail.com",
+  "Password":"1234567890"
+}
+###
+POST {{Library_Management_API_HostAddress}}/api/User/LogIn
+Content-Type:application/json
+{
+  "Email":"abcdefgh@hotmail.com",
+  "Password":"123456789"
+}
+###
+PUT {{Library_Management_API_HostAddress}}/api/User/Update-User
+Authorization: Bearer {{Token}}
+Content-Type:application/json
+{
+  "Id":2,
+  "Name":"asd",
+  "Surname":"Çalı",
+  "Password":"12349"
+}
+###
+PUT {{Library_Management_API_HostAddress}}/api/User/Update-Membership
+Authorization: Bearer {{Token}}
+Content-Type:application/json
+{
+  "UserId":2,
+  "MembershipType":1
+}

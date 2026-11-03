@@ -1,5 +1,4 @@
 ﻿using Business_.DTOs.User_DTOs;
-using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -19,6 +18,6 @@ namespace Business_.DTOs.Book_DTOs
         public int Count { get; set; }
         [Required]
         [StringLength(13)]
-        public string BookISMB { get; set; }
+        public string BookISBN { get; set; }
     }
 }

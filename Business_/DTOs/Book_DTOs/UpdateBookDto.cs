@@ -11,6 +11,6 @@ namespace Business_.DTOs.Book_DTOs
         public string Writer { get; set; }
         public string Genre { get; set; }
         public int Count { get; set; }
-        public string BookISMB { get; set; }
+        public string BookISBN { get; set; }
     }
 }

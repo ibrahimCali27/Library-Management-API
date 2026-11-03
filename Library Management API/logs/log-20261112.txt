@@ -1,0 +1,328 @@
+2026-11-12 09:49:54.292 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/update-fine - null 0
+2026-11-12 09:49:54.307 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11.11.2026 07:49:03', Current time (UTC): '12.11.2026 06:49:54'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-11-12 09:49:54.315 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11.11.2026 07:49:03', Current time (UTC): '12.11.2026 06:49:54'.
+2026-11-12 09:49:54.317 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-11-12 09:49:54.319 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-11-12 09:49:54.322 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/update-fine - 401 0 null 29.8602ms
+2026-11-12 09:50:00.838 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/update-fine - null 0
+2026-11-12 09:50:00.846 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11.11.2026 07:49:03', Current time (UTC): '12.11.2026 06:50:00'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-11-12 09:50:00.851 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11.11.2026 07:49:03', Current time (UTC): '12.11.2026 06:50:00'.
+2026-11-12 09:50:00.855 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-11-12 09:50:00.858 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-11-12 09:50:00.861 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/update-fine - 401 0 null 22.8906ms
+2026-11-12 09:50:08.760 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7156/api/User/LogIn - application/json 64
+2026-11-12 09:50:08.774 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.UserController.Login (Library Management API)'
+2026-11-12 09:50:08.776 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Business_.DTOs.User_DTOs.LogInDto) on controller Library_Management_API.Controllers.UserController (Library Management API).
+2026-11-12 09:50:08.990 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@dto_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[MembershipId], [u].[Name], [u].[Password], [u].[RegisterDate], [u].[Surname], [u].[UserType]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @dto_Email
+2026-11-12 09:50:09.464 +03:00 [INF] Executing OkObjectResult, writing value of type 'Business_.DTOs.Auth_DTOs.Create_JWT_Dto'.
+2026-11-12 09:50:09.477 +03:00 [INF] Executed action Library_Management_API.Controllers.UserController.Login (Library Management API) in 695.7783ms
+2026-11-12 09:50:09.479 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.UserController.Login (Library Management API)'
+2026-11-12 09:50:09.481 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7156/api/User/LogIn - 200 null application/json; charset=utf-8 723.3763ms
+2026-11-12 09:50:24.149 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/update-fine - null 0
+2026-11-12 09:50:24.153 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.UpdateFine (Library Management API)'
+2026-11-12 09:50:24.166 +03:00 [INF] Route matched with {action = "UpdateFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateFine() on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:50:24.495 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId], [u].[Id], [u].[BookId], [u].[Borrow_Date], [u].[Is_Returned], [u].[Return_Date], [u].[Returned_Date], [u].[UserId]
+FROM [Fines] AS [f]
+INNER JOIN [User_Book] AS [u] ON [f].[User_BookId] = [u].[Id]
+2026-11-12 09:50:24.521 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Fines] SET [FineDate] = @p0, [Price] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2026-11-12 09:50:24.532 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-11-12 09:50:24.533 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.UpdateFine (Library Management API) in 364.5134ms
+2026-11-12 09:50:24.534 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.UpdateFine (Library Management API)'
+2026-11-12 09:50:24.536 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/update-fine - 200 0 null 387.3379ms
+2026-11-12 09:50:48.898 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:50:48.903 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:50:48.916 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:50:48.950 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[User_BookId] = @dto_Id
+2026-11-12 09:51:02.469 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 13551.0816ms
+2026-11-12 09:51:02.472 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:51:02.524 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/pay-fine
+System.Exception: This fine doesn't exist.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 54
+   at Library_Management_API.Controllers.FineController.PayFine(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 09:51:02.552 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - 500 null application/json; charset=utf-8 13654.1704ms
+2026-11-12 09:51:21.870 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:51:21.874 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:51:21.875 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:51:21.888 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[User_BookId] = @dto_Id
+2026-11-12 09:51:45.482 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 23574.1862ms
+2026-11-12 09:51:45.516 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:51:45.553 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/pay-fine
+System.Exception: This fine doesn't exist.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 54
+   at Library_Management_API.Controllers.FineController.PayFine(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 09:51:45.554 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:51:45.562 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:51:45.563 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:51:45.566 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - 499 null application/json; charset=utf-8 23695.5369ms
+2026-11-12 09:51:45.572 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[User_BookId] = @dto_Id
+2026-11-12 09:51:48.669 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 3103.0049ms
+2026-11-12 09:51:48.671 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:51:48.712 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/pay-fine
+System.Exception: This fine doesn't exist.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 54
+   at Library_Management_API.Controllers.FineController.PayFine(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 09:51:48.721 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - 500 null application/json; charset=utf-8 3167.246ms
+2026-11-12 09:51:52.290 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:51:52.294 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:51:52.296 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:51:52.304 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[User_BookId] = @dto_Id
+2026-11-12 09:52:22.822 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 30524.355ms
+2026-11-12 09:52:22.824 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:52:22.860 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/pay-fine
+System.Exception: This fine doesn't exist.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 54
+   at Library_Management_API.Controllers.FineController.PayFine(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 09:52:22.867 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - 499 null application/json; charset=utf-8 30576.8229ms
+2026-11-12 09:52:25.608 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:52:25.612 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:52:25.613 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:52:25.621 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[User_BookId] = @dto_Id
+2026-11-12 09:53:54.670 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 89055.3649ms
+2026-11-12 09:53:54.675 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:53:54.709 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/pay-fine
+System.Exception: This fine doesn't exist.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 54
+   at Library_Management_API.Controllers.FineController.PayFine(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 09:53:54.717 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - 499 null application/json; charset=utf-8 89109.7387ms
+2026-11-12 09:53:55.632 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:53:55.636 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:53:55.638 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:53:55.652 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[User_BookId] = @dto_Id
+2026-11-12 09:54:25.281 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 29641.2451ms
+2026-11-12 09:54:25.284 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:54:26.584 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/pay-fine
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 55
+   at Library_Management_API.Controllers.FineController.PayFine(PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 09:54:26.592 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - 499 null application/json; charset=utf-8 30960.0382ms
+2026-11-12 09:54:35.993 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:54:35.996 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:54:35.997 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:54:36.006 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[User_BookId] = @dto_Id
+2026-11-12 09:56:06.076 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-12 09:56:06.520 +03:00 [INF] Now listening on: https://localhost:7156
+2026-11-12 09:56:06.522 +03:00 [INF] Now listening on: http://localhost:5113
+2026-11-12 09:56:06.594 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-12 09:56:06.595 +03:00 [INF] Hosting environment: Development
+2026-11-12 09:56:06.597 +03:00 [INF] Content root path: C:\Users\user\source\repos\Library-Management-API\Library Management API
+2026-11-12 09:56:17.521 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/pay-fine - application/json 47
+2026-11-12 09:56:17.761 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 09:56:17.837 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 09:56:20.139 +03:00 [INF] Executed DbCommand (89ms) [Parameters=[@dto_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId]
+FROM [Fines] AS [f]
+WHERE [f].[Id] = @dto_Id
+2026-11-12 10:16:34.619 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-12 10:16:35.137 +03:00 [INF] Now listening on: https://localhost:7156
+2026-11-12 10:16:35.140 +03:00 [INF] Now listening on: http://localhost:5113
+2026-11-12 10:16:35.575 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-12 10:16:35.577 +03:00 [INF] Hosting environment: Development
+2026-11-12 10:16:35.578 +03:00 [INF] Content root path: C:\Users\user\source\repos\Library-Management-API\Library Management API
+2026-11-12 10:16:44.585 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/1/pay-fine/2 - application/json 20
+2026-11-12 10:16:44.845 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 10:16:44.912 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Int32, Int32, Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 10:16:47.319 +03:00 [INF] Executed DbCommand (91ms) [Parameters=[@UserBookId='?' (DbType = Int32), @UserId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId], [u].[Id], [u].[BookId], [u].[Borrow_Date], [u].[Is_Returned], [u].[Return_Date], [u].[Returned_Date], [u].[UserId]
+FROM [Fines] AS [f]
+INNER JOIN [User_Book] AS [u] ON [f].[User_BookId] = [u].[Id]
+WHERE [f].[User_BookId] = @UserBookId AND [u].[UserId] = @UserId
+2026-11-12 10:16:47.372 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@UserId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BookId], [u].[Borrow_Date], [u].[Is_Returned], [u].[Return_Date], [u].[Returned_Date], [u].[UserId]
+FROM [User_Book] AS [u]
+WHERE [u].[UserId] = @UserId
+2026-11-12 10:16:56.060 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 11140.0489ms
+2026-11-12 10:16:56.064 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 10:16:56.113 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/1/pay-fine/2
+System.Exception: This fine doesn't exist.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(Int32 UserId, Int32 UserBookId, PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 55
+   at Library_Management_API.Controllers.FineController.PayFine(Int32 UserId, Int32 UserBookId, PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 10:16:56.217 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/1/pay-fine/2 - 500 null application/json; charset=utf-8 11642.6161ms
+2026-11-12 10:16:57.328 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/1/pay-fine/5 - application/json 20
+2026-11-12 10:16:57.337 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 10:16:57.339 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Int32, Int32, Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 10:16:57.375 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@UserBookId='?' (DbType = Int32), @UserId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId], [u].[Id], [u].[BookId], [u].[Borrow_Date], [u].[Is_Returned], [u].[Return_Date], [u].[Returned_Date], [u].[UserId]
+FROM [Fines] AS [f]
+INNER JOIN [User_Book] AS [u] ON [f].[User_BookId] = [u].[Id]
+WHERE [f].[User_BookId] = @UserBookId AND [u].[UserId] = @UserId
+2026-11-12 10:16:57.434 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@UserId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BookId], [u].[Borrow_Date], [u].[Is_Returned], [u].[Return_Date], [u].[Returned_Date], [u].[UserId]
+FROM [User_Book] AS [u]
+WHERE [u].[UserId] = @UserId
+2026-11-12 10:17:05.493 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 8152.9579ms
+2026-11-12 10:17:05.496 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 10:17:05.534 +03:00 [ERR] An unexpected error occurred. Path: /api/Fine/1/pay-fine/5
+System.Exception: Not enough money.
+   at Business_.BusinessLayer.BLL.FineService.PayFineAsync(Int32 UserId, Int32 UserBookId, PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Business_\BusinessLayer\BLL\FineBBL.cs:line 56
+   at Library_Management_API.Controllers.FineController.PayFine(Int32 UserId, Int32 UserBookId, PayFineDto dto) in C:\Users\user\source\repos\Library-Management-API\Library Management API\Controllers\FineController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Library_Management_API.GlobalExceptionMiddleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\user\source\repos\Library-Management-API\Library Management API\GlobalExceptionMiddleware\GlobalExceptionMiddleware.cs:line 20
+2026-11-12 10:17:05.542 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/1/pay-fine/5 - 500 null application/json; charset=utf-8 8213.8733ms
+2026-11-12 10:17:08.143 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7156/api/Fine/1/pay-fine/5 - application/json 19
+2026-11-12 10:17:08.153 +03:00 [INF] Executing endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 10:17:08.155 +03:00 [INF] Route matched with {action = "PayFine", controller = "Fine"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PayFine(Int32, Int32, Business_.DTOs.Fine_DTOs.PayFineDto) on controller Library_Management_API.Controllers.FineController (Library Management API).
+2026-11-12 10:17:08.264 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@UserBookId='?' (DbType = Int32), @UserId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[Id], [f].[FineDate], [f].[IsReturned], [f].[Price], [f].[User_BookId], [u].[Id], [u].[BookId], [u].[Borrow_Date], [u].[Is_Returned], [u].[Return_Date], [u].[Returned_Date], [u].[UserId]
+FROM [Fines] AS [f]
+INNER JOIN [User_Book] AS [u] ON [f].[User_BookId] = [u].[Id]
+WHERE [f].[User_BookId] = @UserBookId AND [u].[UserId] = @UserId
+2026-11-12 10:17:08.271 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@UserId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BookId], [u].[Borrow_Date], [u].[Is_Returned], [u].[Return_Date], [u].[Returned_Date], [u].[UserId]
+FROM [User_Book] AS [u]
+WHERE [u].[UserId] = @UserId
+2026-11-12 10:17:08.443 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Date)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Fines] SET [IsReturned] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+UPDATE [User_Book] SET [Is_Returned] = @p2, [Returned_Date] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2026-11-12 10:17:08.488 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-11-12 10:17:08.493 +03:00 [INF] Executed action Library_Management_API.Controllers.FineController.PayFine (Library Management API) in 335.9379ms
+2026-11-12 10:17:08.494 +03:00 [INF] Executed endpoint 'Library_Management_API.Controllers.FineController.PayFine (Library Management API)'
+2026-11-12 10:17:08.495 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7156/api/Fine/1/pay-fine/5 - 200 null text/plain; charset=utf-8 352.7944ms

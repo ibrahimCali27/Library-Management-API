@@ -1,7 +1,6 @@
 ﻿using Business_.BusinessLayer.BLL;
 using Business_.DTOs.User_DTOs;
 using Business_.Interfaces;
-using Entity.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -31,7 +30,13 @@ namespace Library_Management_API.Controllers
         public async Task<IActionResult> Login(LogInDto dto)
         {
             var result = await _userService.LoginAsync(dto);
-
+            if (result == null)
+            {
+                return Unauthorized(new
+                {
+                    Message = "Geçersiz e-posta veya şifre."
+                });
+            }
             return Ok(result);
         }
         [Authorize]
@@ -46,6 +51,7 @@ namespace Library_Management_API.Controllers
         [HttpPut("Update-Membership")]
         public async Task<IActionResult> UpdateMembershipAsync(UpdateMembershipDto dto)
         {
+
             var result = await _userService.UpdateMembershipAsync(dto);
 
             return result ? Ok() : BadRequest();

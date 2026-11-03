@@ -1,6 +1,5 @@
 ﻿using Business_.DTOs.Auth_DTOs;
 using Business_.DTOs.User_DTOs;
-using Core.Entities;
 using System.ComponentModel.DataAnnotations;
 namespace Business_.Interfaces
 {

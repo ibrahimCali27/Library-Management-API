@@ -10,14 +10,9 @@ using System.Text;
 
 namespace Business_.BusinessLayer.BLL
 {
-    public class AuthBBL : IJWTService
+    public class AuthBBL(IConfiguration configuration) : IJWTService
     {
-        private readonly IConfiguration _configuration;
-
-        public AuthBBL(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+        private readonly IConfiguration _configuration = configuration;
 
         public string GenerateToken(User user)
         {

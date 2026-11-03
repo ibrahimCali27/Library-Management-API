@@ -1,12 +1,11 @@
-﻿
-using Microsoft.Identity.Client.NativeInterop;
+﻿using Microsoft.Identity.Client.NativeInterop;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Entity.Entities;
-namespace DataAccess.Context
+
+namespace DataAccess.Library_DbContext
 {
     public class DBContext : DbContext {
         public DBContext(DbContextOptions<DBContext> options)

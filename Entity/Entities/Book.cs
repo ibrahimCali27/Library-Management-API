@@ -1,8 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Entities
+namespace Entity.Entities
 {
     public class Book
     {
@@ -11,7 +12,7 @@ namespace Core.Entities
         public string Writer { get; set; }
         public string Genre { get; set; }
         public int Count { get; set; }
-        public string BookISMB { get; set; }
+        public string BookISBN { get; set; }
         public ICollection<User_Book> User_Book { get; set; }
 
     }

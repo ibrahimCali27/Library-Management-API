@@ -7,24 +7,68 @@
       "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\library management api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\library management api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\tests\\test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\tests\\test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\booksbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\booksbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\tests\\booktest.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\tests\\booktest.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\tests\\user_test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\tests\\user_test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\tests\\fine_test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\tests\\fine_test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\dtos\\auth_dtos\\create_jwt_dto.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\dtos\\auth_dtos\\create_jwt_dto.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\logs\\log-20261103.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\logs\\log-20261103.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\dtos\\book_dtos\\addbooksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\dtos\\book_dtos\\addbooksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\dtos\\user_dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\dtos\\user_dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\globalexceptionmiddleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\globalexceptionmiddleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\dtos\\user_dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\dtos\\user_dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\library-management-api\\library management api\\globalexceptionmiddleware\\extensionexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA01EFC3-7446-DAC6-5BC1-37AC02A26F17}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\globalexceptionmiddleware\\extensionexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|c:\\users\\user\\source\\repos\\library-management-api\\business_\\businesslayer\\bll\\finebbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DA24B9D-487B-4465-A5C7-EABBB8ED7E5F}|Business_\\Business_.csproj|solutionrelative:business_\\businesslayer\\bll\\finebbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,20 +78,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Library Management API.http",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Library Management API.http",
-              "RelativeDocumentMoniker": "Library Management API\\Library Management API.http",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Library Management API.http",
-              "RelativeToolTip": "Library Management API\\Library Management API.http",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "User_Test.http",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\User_Test.http",
+              "RelativeDocumentMoniker": "Library Management API\\Tests\\User_Test.http",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\User_Test.http",
+              "RelativeToolTip": "Library Management API\\Tests\\User_Test.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-10-27T11:19:52.78Z",
+              "WhenOpened": "2026-10-30T13:20:16.299Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Fine_Test.http",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\Fine_Test.http",
+              "RelativeDocumentMoniker": "Library Management API\\Tests\\Fine_Test.http",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\Fine_Test.http",
+              "RelativeToolTip": "Library Management API\\Tests\\Fine_Test.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-10-30T12:20:27.265Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookTest.http",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\BookTest.http",
+              "RelativeDocumentMoniker": "Library Management API\\Tests\\BookTest.http",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\BookTest.http",
+              "RelativeToolTip": "Library Management API\\Tests\\BookTest.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-11-03T10:18:44.181Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Library Management API\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Library Management API\\Controllers\\BookController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwDQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T11:57:49.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T10:27:18.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BooksBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\BooksBBL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowJYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T10:21:26.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "log-20261103.txt",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\logs\\log-20261103.txt",
+              "RelativeDocumentMoniker": "Library Management API\\logs\\log-20261103.txt",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\logs\\log-20261103.txt",
+              "RelativeToolTip": "Library Management API\\logs\\log-20261103.txt",
+              "ViewState": "AgIAAOgJAAAAAAAAAAAAAPQJAACXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-11-03T11:41:10.525Z",
               "EditorCaption": ""
             },
             {
@@ -58,61 +182,126 @@
               "RelativeDocumentMoniker": "Library Management API\\Program.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Program.cs",
               "RelativeToolTip": "Library Management API\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAqwCEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T10:04:39.29Z",
+              "WhenOpened": "2026-11-03T11:35:26.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BookTest.http",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\BookTest.http",
-              "RelativeDocumentMoniker": "Library Management API\\Tests\\BookTest.http",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\BookTest.http",
-              "RelativeToolTip": "Library Management API\\Tests\\BookTest.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-10-30T08:47:58.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "test.http",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\test.http",
-              "RelativeDocumentMoniker": "Library Management API\\Tests\\test.http",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Tests\\test.http",
-              "RelativeToolTip": "Library Management API\\Tests\\test.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-10-30T08:43:31.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Interfaces\\IBookService.cs",
-              "RelativeDocumentMoniker": "Business_\\Interfaces\\IBookService.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\Interfaces\\IBookService.cs",
-              "RelativeToolTip": "Business_\\Interfaces\\IBookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Library Management API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Library Management API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T08:34:43.386Z",
+              "WhenOpened": "2026-11-03T11:48:19.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Library Management API\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Library Management API\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAwwEcAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Create_JWT_Dto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\Auth_DTOs\\Create_JWT_Dto.cs",
+              "RelativeDocumentMoniker": "Business_\\DTOs\\Auth_DTOs\\Create_JWT_Dto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\Auth_DTOs\\Create_JWT_Dto.cs",
+              "RelativeToolTip": "Business_\\DTOs\\Auth_DTOs\\Create_JWT_Dto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T07:13:48.81Z",
+              "WhenOpened": "2026-11-03T11:24:36.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddBooksDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\Book_DTOs\\AddBooksDto.cs",
+              "RelativeDocumentMoniker": "Business_\\DTOs\\Book_DTOs\\AddBooksDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\Book_DTOs\\AddBooksDto.cs",
+              "RelativeToolTip": "Business_\\DTOs\\Book_DTOs\\AddBooksDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA8wBQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T11:49:01.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\GlobalExceptionMiddleware\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Library Management API\\GlobalExceptionMiddleware\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\GlobalExceptionMiddleware\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "Library Management API\\GlobalExceptionMiddleware\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T11:43:44.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LogInDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\User_DTOs\\LogInDto.cs",
+              "RelativeDocumentMoniker": "Business_\\DTOs\\User_DTOs\\LogInDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\User_DTOs\\LogInDto.cs",
+              "RelativeToolTip": "Business_\\DTOs\\User_DTOs\\LogInDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T10:38:32.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\User_DTOs\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "Business_\\DTOs\\User_DTOs\\UpdateUserDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\DTOs\\User_DTOs\\UpdateUserDto.cs",
+              "RelativeToolTip": "Business_\\DTOs\\User_DTOs\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T11:39:25.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ExtensionExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\GlobalExceptionMiddleware\\ExtensionExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Library Management API\\GlobalExceptionMiddleware\\ExtensionExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Library Management API\\GlobalExceptionMiddleware\\ExtensionExceptionHandler.cs",
+              "RelativeToolTip": "Library Management API\\GlobalExceptionMiddleware\\ExtensionExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T11:43:42.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "JWTBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T11:32:11.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FineBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "RelativeDocumentMoniker": "Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Library-Management-API\\Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "RelativeToolTip": "Business_\\BusinessLayer\\BLL\\FineBBL.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwDgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T11:16:27.043Z",
               "EditorCaption": ""
             }
           ]

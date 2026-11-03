@@ -49,9 +49,9 @@ namespace Library_Management_API.Controllers
         {
             var result = await _BookService.AddBookAsync(dto);
 
+            
             if (!result)
                 return BadRequest();
-
             return Ok("Book added successfully.");
         }
         [Authorize(Roles = "Admin")]
@@ -77,12 +77,23 @@ namespace Library_Management_API.Controllers
 
             return Ok("Book updated successfully.");
         }
-        [Authorize]
+        //[Authorize]
         [HttpGet("view-books")]
-        public async Task<IActionResult> ViewBook(ViewBookDto dto)
+        public async Task<IActionResult> ViewBook([FromQuery] ViewBookDto dto)
         {
+            Console.WriteLine("Endpoint çalıştı");
             var Books = await _BookService.ViewBookAsync(dto);
 
+            if (Books.Count != 0)
+                return Ok(Books);
+
+            return NotFound("No books found for this genre.");
+        }
+        [Authorize(Roles = "Admin")]
+        [HttpGet("view-borrowed-books")]
+        public async Task<IActionResult> ViewBorrowedBook()
+        {
+            var Books = await _BookService.ViewBorrowedBookAsync();
             if (Books.Count != 0)
                 return Ok(Books);
 

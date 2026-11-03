@@ -1,29 +1,54 @@
 ﻿@Library_Management_API_HostAddress = https://localhost:7156
-
+@Token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhYmNkZWZnaGlAaG90bWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzkzNzEwNTkxLCJpc3MiOiJodHRwczovL2FwaS5pYnJhaGltY2FsaS5jb20iLCJhdWQiOiJodHRwczovL3d3dy5pYnJhaGltY2FsaS5jb20ifQ.42wnnLpWlCKkRb2gkUz_vKJL-AZ-v5VTAlypTM9THrM
 POST {{Library_Management_API_HostAddress}}/api/Book/add-book
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE0IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiaWJyYWhpbUBleGFtcGxlLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzkzMzQ4NTE2LCJpc3MiOiJodHRwczovL2FwaS5pYnJhaGltY2FsaS5jb20iLCJhdWQiOiJodHRwczovL3d3dy5pYnJhaGltY2FsaS5jb20ifQ.N_9JamoPYGjGVpMUvNlCiJ7V2GdQYIoYjujbkrdLYpM
+Authorization: Bearer {{Token}}
+Content-Type:application/json
+{
+  "Name":"Book3",
+  "Writer":"Writer2",
+  "Genre":"Genre1",
+  "Count":10,
+  "BookISBN":"1234567891236"
+}
+###
+POST {{Library_Management_API_HostAddress}}/api/Book/update-book/1
+Authorization: Bearer {{Token}}
 Content-Type:application/json
 {
   "Name":"Book1",
   "Writer":"Writer1",
   "Genre":"Genre1",
   "Count":5,
-  "BookISMB":"1234567891234"
+  "BookISBN":"1234567891234"
 }
+
 ###
-POST {{Library_Management_API_HostAddress}}/api/Book/update-book/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE0IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiaWJyYWhpbUBleGFtcGxlLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzkzMzUyNzI2LCJpc3MiOiJodHRwczovL2FwaS5pYnJhaGltY2FsaS5jb20iLCJhdWQiOiJodHRwczovL3d3dy5pYnJhaGltY2FsaS5jb20ifQ.9rqFJsL6jCJ4kcLzLj8HOvcwgEgwZnkW_NhltYeJvWM
+PUT {{Library_Management_API_HostAddress}}/api/Book/2/borrow-book/2
+Authorization: Bearer {{Token}}
 Content-Type:application/json
 {
-  "Name":"Book1",
-  "Writer":"Writer1",
-  "Genre":"Genre1",
-  "Count":8,
-  "BookISMB":"1234567891234"
+
 }
+
 ###
-GET {{Library_Management_API_HostAddress}}/api/Book/view-books
+PUT {{Library_Management_API_HostAddress}}/api/Book/return-book
+Authorization: Bearer {{Token}}
 Content-Type:application/json
 {
-  "Genre":"Genre1 "
+   "UserBookId":"a",
+  "UserId":2,
+  "BookId":2
 }
+###
+DELETE {{Library_Management_API_HostAddress}}/api/Book/delete-book
+Authorization: Bearer {{Token}}
+Content-Type:application/json
+{
+  "BookId":1
+}
+###
+GET {{Library_Management_API_HostAddress}}/api/Book/view-borrowed-books
+Authorization: Bearer {{Token}}
+###
+GET {{Library_Management_API_HostAddress}}/api/Book/view-books?Genre=Genre1
+Authorization: Bearer {{Token}}

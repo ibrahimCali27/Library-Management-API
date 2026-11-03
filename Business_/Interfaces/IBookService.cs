@@ -1,8 +1,9 @@
 ﻿using Business_.DTOs.Book_DTOs;
-using Core.Entities;
+using Entity.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
 
 namespace Business_.Interfaces
 {
@@ -14,5 +15,6 @@ namespace Business_.Interfaces
         Task<bool> DeleteBookAsync(DeleteBooksDto dto);
         Task<bool> UpdateBookAsync(int id, UpdateBookDto dto);
         Task<List<Book>> ViewBookAsync(ViewBookDto dto);
+        Task<List<User_Book>> ViewBorrowedBookAsync();
     }
 }

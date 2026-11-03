@@ -103,8 +103,44 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "Genre",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_API.Controllers.BookController",
+    "Method": "ViewBorrowedBook",
+    "RelativePath": "api/Book/view-borrowed-books",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_API.Controllers.FineController",
+    "Method": "PayFine",
+    "RelativePath": "api/Fine/{UserId}/pay-fine/{UserBookId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "UserBookId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
         "Name": "dto",
-        "Type": "Business_.DTOs.Book_DTOs.ViewBookDto",
+        "Type": "Business_.DTOs.Fine_DTOs.PayFineDto",
         "IsRequired": true
       }
     ],
@@ -115,16 +151,6 @@
     "Method": "CreateFine",
     "RelativePath": "api/Fine/create-fine",
     "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Library_Management_API.Controllers.FineController",
-    "Method": "PayFine",
-    "RelativePath": "api/Fine/pay-fine",
-    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [],

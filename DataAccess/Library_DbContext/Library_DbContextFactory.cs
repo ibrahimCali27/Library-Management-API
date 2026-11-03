@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace DataAccess.Context // Sizin namespace adınız neyse onu yazın
+namespace DataAccess.Library_DbContext // Sizin namespace adınız neyse onu yazın
 {
     public class LibraryDbContextFactory : IDesignTimeDbContextFactory<DBContext>
     {

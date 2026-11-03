@@ -1,4 +1,4 @@
-﻿using Core.Entities;
+﻿
 using Microsoft.Identity.Client.NativeInterop;
 using System;
 using System.Collections.Generic;

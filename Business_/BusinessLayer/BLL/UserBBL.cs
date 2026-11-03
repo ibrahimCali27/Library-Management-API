@@ -1,7 +1,7 @@
 ﻿using Business_.DTOs.Auth_DTOs;
 using Business_.DTOs.User_DTOs;
 using Business_.Interfaces;
-using DataAccess.Context;
+using DataAccess.Library_DbContext;
 using Entity.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,32 +10,35 @@ using Serilog;
 namespace Business_.BusinessLayer.BLL
 {
 
-    public class UserService(DBContext context,IJWTService jwtService) : IUserService
+    public class UserService(DBContext context,IJWTService jwtService,ILogger<UserService> logger) : IUserService
     {
-        private readonly DBContext? _context = context;
+        private readonly DBContext _context = context;
         private readonly IJWTService _jwtService = jwtService;
-        private readonly ILogger<BookService> _logger;
+        private readonly ILogger<UserService> _logger = logger;
 
-        public async Task<Create_JWT_Dto> CreateUserAsync(CreateUserDto dto)
+        public async Task<Create_JWT_Dto?> CreateUserAsync(CreateUserDto dto)
         {
             var existingUser = await _context.Users
                 .FirstOrDefaultAsync(x => x.Email == dto.Email);
 
             if (existingUser != null)
             {
-                throw new InvalidOperationException("User already exists.");
+                _logger.LogWarning("Bu kullanıcı zaten üye.");
+                return null;
             }
 
             if (dto.Password.Length < 8)
             {
-                throw new InvalidOperationException("Password must be at least 8 characters.");
+                _logger.LogWarning("Şifre en az 8 harf uzunluğunda olmalıdır.");
+                return null;
             }
             var membership = await _context.Memberships
     .FirstOrDefaultAsync(x => x.Type == dto.MembershipType);
 
             if (membership == null)
             {
-                throw new Exception("Membership not found.");
+                _logger.LogWarning("Üyelik bulunamadı.");
+                return null;
             }
             var user = new User
             {
@@ -61,12 +64,19 @@ namespace Business_.BusinessLayer.BLL
             };
             
         }
+
+        public Microsoft.Extensions.Logging.ILogger Get_logger1()
+        {
+            return _logger;
+        }
+
         public async Task<bool> UpdateUserAsync(UpdateUserDto dto)
         {
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == dto.Id);
             if (user == null)
             {
-                throw new Exception("User not found.");
+                _logger.LogWarning("Kullanıcı bulunamadı. Id: {UserId}", dto.Id);
+                return false;
             }
 
             bool samePassword = BCrypt.Net.BCrypt.Verify(dto.Password,user.Password);
@@ -78,7 +88,8 @@ namespace Business_.BusinessLayer.BLL
 
             if (noChanges)
             {
-                throw new Exception("No changes detected.");
+                _logger.LogInformation("Bu kullanıcı güncellenmemiştir. Id: {UserId}", dto.Id);
+                return false;
             }
 
             user.Name = dto.Name;
@@ -88,7 +99,8 @@ namespace Business_.BusinessLayer.BLL
             {
                 if (dto.Password.Length < 8)
                 {
-                    throw new Exception("Password must be at least 8 characters.");
+                    _logger.LogWarning("Şifre en az 8 karakterden oluşmalıdır.");
+                    return false;
                 }
 
                 user.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password);
@@ -105,25 +117,28 @@ namespace Business_.BusinessLayer.BLL
 
             if (User == null)
             {
-                throw new Exception("User not found.");
+                _logger.LogWarning("Kullanıcı bulunamadı.");
+                return false;
             }
 
             int borrowedBooksCount = await _context.User_Book
-    .CountAsync(x => x.User_Id == dto.UserId);
+    .CountAsync(x => x.UserId == dto.UserId);
             
             var targetMembership = await _context.Memberships
     .FirstOrDefaultAsync(x => x.Type == dto.MembershipType);
             
             if (targetMembership == null) 
             {
-                throw new Exception("Membership information is not entered.");
+                _logger.LogWarning("Üyelik bilgisi girilmedi.");
+                return false;
             }
             
             int NewBorrowLimit = targetMembership.Borrow_Limit;
             
             if(!User.Membership.IsUnlimited && borrowedBooksCount > NewBorrowLimit)
             {
-                throw new Exception("You cannot switch memberships.");
+                _logger.LogWarning("Üyeliğini değiştiremezsin.Bazı kitaplarını iade ettikten sonra tekrar dene.");
+                return false;
             }
 
             User.MembershipId = targetMembership.Id;
@@ -131,14 +146,15 @@ namespace Business_.BusinessLayer.BLL
             
             return await _context.SaveChangesAsync() > 0;
         }
-        public async Task<Create_JWT_Dto> LoginAsync(LogInDto dto)
+        public async Task<Create_JWT_Dto?> LoginAsync(LogInDto dto)
         {
             var user = await _context.Users
                 .FirstOrDefaultAsync(x => x.Email == dto.Email);
 
             if (user == null)
             {
-                throw new Exception("Invalid email or password.");
+                _logger.LogWarning("Geçersiz eposta ya da şifre.");
+                return null;
             }
 
             bool validPassword = BCrypt.Net.BCrypt.Verify(
@@ -147,7 +163,8 @@ namespace Business_.BusinessLayer.BLL
 
             if (!validPassword)
             {
-                throw new Exception("Invalid email or password.");
+                _logger.LogWarning("Geçersiz eposta ya da şifre.");
+                return null;
             }
 
             var token = _jwtService.GenerateToken(user);
@@ -161,7 +178,8 @@ namespace Business_.BusinessLayer.BLL
 
         public async Task<bool> DeleteUserAsync(DeleteUserDto dto)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserType == dto.Id) ?? throw new Exception("User not found.");
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserType == dto.Id); 
+            if (user ==null){ _logger.LogWarning("Kullanıcı bulunamadı."); return false; }
             
             Console.WriteLine(dto.Id);
             Console.WriteLine((int)dto.Id);

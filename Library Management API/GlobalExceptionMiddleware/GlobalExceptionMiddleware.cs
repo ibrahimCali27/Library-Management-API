@@ -1,17 +1,11 @@
 ﻿namespace Library_Management_API.GlobalExceptionMiddleware
 {
-    public class GlobalExceptionMiddleware
+    public class GlobalExceptionMiddleware(
+        RequestDelegate next,
+        ILogger<GlobalExceptionMiddleware> logger)
     {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<GlobalExceptionMiddleware> _logger;
-
-        public GlobalExceptionMiddleware(
-            RequestDelegate next,
-            ILogger<GlobalExceptionMiddleware> logger)
-        {
-            _next = next;
-            _logger = logger;
-        }
+        private readonly RequestDelegate _next = next;
+        private readonly ILogger<GlobalExceptionMiddleware> _logger = logger;
 
         public async Task InvokeAsync(HttpContext context)
         {
@@ -26,7 +20,7 @@
                     "An unexpected error occurred. Path: {Path}",
                     context.Request.Path);
 
-                context.Response.StatusCode = 500;
+                context.Response.StatusCode = 400;
                 context.Response.ContentType = "application/json";
 
                 var response = new

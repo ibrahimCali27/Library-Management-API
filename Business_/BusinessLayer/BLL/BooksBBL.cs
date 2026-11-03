@@ -1,7 +1,6 @@
 ﻿using Business_.DTOs.Book_DTOs;
 using Business_.Interfaces;
-using Core.Entities;
-using DataAccess.Context;
+using DataAccess.Library_DbContext;
 using Entity.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,46 +8,66 @@ using Microsoft.Extensions.Logging;
 using System.ComponentModel;
 namespace Business_.BusinessLayer.BLL
 {
-    public class BookService(DBContext context) : IBookService
+    public class BookService(DBContext context,ILogger<BookService> logger) : IBookService
     {
-        private readonly ILogger<BookService> _logger;
+        private readonly ILogger<BookService> _logger = logger;
         private readonly DBContext _context = context;
 
         public async Task<bool> BorrowBookAsync(int UserId,int BookId,BorrowBooksDto dto)
         {
 
             var book = await _context.Books.FindAsync(BookId);
-            var user = await _context.Users.FindAsync(UserId);
+            var user = await _context.Users
+    .Include(x => x.Membership)
+    .FirstOrDefaultAsync(x => x.Id == UserId);
+
             if (book == null)
             {
-                throw new Exception("This book doesn't exist.");
+                _logger.LogWarning("Bu kitap kütüphanede yoktur.");
+                return false;
             }
+            if (user == null) { _logger.LogWarning("Böyle bir kullanıcı yoktur."); return false; }
             if (book.Count <= 0)
             {
-                throw new Exception("This book is not in stock.");
+                _logger.LogWarning("Bu kitap stoklarda yoktur.");
+                    return false;
             }
-            book.Count--;
-            var BorrowBook = new User_Book
+            var activeBorrowCount = await _context.User_Book
+    .CountAsync(x =>
+        x.UserId == UserId &&
+        !x.Is_Returned);
+
+            if (activeBorrowCount >= user.Membership.Borrow_Limit)
             {
-                User_Id = UserId,
-                Book_Id = BookId,
+                _logger.LogWarning("Daha fazla kitap ödünç alamazsın.");
+                return false;
+            }
+
+            book.Count--;
+            
+            var userBook = new User_Book
+            {
+                UserId = UserId,
+                BookId = BookId,
                 Borrow_Date = DateOnly.FromDateTime(DateTime.Now),
                 Return_Date = DateOnly.FromDateTime(DateTime.Now).AddDays(7)
             };
-            _context.User_Book.Add(BorrowBook);
+            _context.User_Book.Add(userBook);
             return await _context.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> ReturnBookAsync(ReturnBooksDto dto)
         {
-            var BorrowRecord = await _context.User_Book
+            var borrowRecord = await _context.User_Book
                 .FirstOrDefaultAsync(x =>
-                    x.Book_Id == dto.BookId &&
-                    x.User_Id == dto.UserId);
+                    x.BookId == dto.BookId &&
+                    x.UserId == dto.UserId &&
+                    !x.Is_Returned);
 
-            if (BorrowRecord == null)
+            if (borrowRecord == null)
             {
-                throw new Exception("This book was not borrowed by this user.");
+                _logger.LogWarning("Aktif ödünç kaydı bulunamamıştır.");
+                return false;
             }
 
             var book = await _context.Books
@@ -58,7 +77,10 @@ namespace Business_.BusinessLayer.BLL
             {
                 book.Count++;
             }
-            BorrowRecord.Returned_Date = DateOnly.FromDateTime(DateTime.Now);
+
+            borrowRecord.Is_Returned = true;
+            borrowRecord.Returned_Date = DateOnly.FromDateTime(DateTime.Now);
+
             return await _context.SaveChangesAsync() > 0;
         }
 
@@ -68,7 +90,8 @@ namespace Business_.BusinessLayer.BLL
             var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Name == dto.Name);
             if (ExistingBook != null)
             {
-                throw new Exception("This book already exists."); 
+                _logger.LogWarning("Bu kitap çoktan eklenmiştir.");
+                return false;
             }
             var Book = new Book
             {
@@ -76,7 +99,7 @@ namespace Business_.BusinessLayer.BLL
                 Writer =dto.Writer,
                 Genre = dto.Genre,
                 Count = dto.Count,
-                BookISMB=dto.BookISMB
+                BookISBN=dto.BookISBN
             };
             _context.Books.Add(Book);
 
@@ -86,49 +109,65 @@ namespace Business_.BusinessLayer.BLL
 
         public async Task<bool> DeleteBookAsync(DeleteBooksDto dto)
         {
-            var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Id == dto.BookId) ?? throw new Exception("This book doesn't exist.");
+            var ExistingBook = await _context.Books.FirstOrDefaultAsync(x => x.Id == dto.BookId);
+                if (ExistingBook == null){
+                _logger.LogWarning("Bu kitap kütüphanede yoktur."); 
+                return false; }
             _context.Books.Remove(ExistingBook);  
             return await _context.SaveChangesAsync() > 0;
         }
         public async Task<bool> UpdateBookAsync(int id,UpdateBookDto dto)
         {
-            var ToBeUpdatedBook = await _context.Books.FindAsync(id);
-            if (ToBeUpdatedBook == null)
-            {
-                throw new Exception("This book doesn't exist.");
+            var ToBeUpdatedBook = await _context.Books.FindAsync(id); 
+                if(ToBeUpdatedBook==null){
+                _logger.LogWarning("Bu kitap kütüphanede yoktur.");
+                return false;
             }
             bool noChanges =
             ToBeUpdatedBook.Name == dto.Name &&
             ToBeUpdatedBook.Writer == dto.Writer &&
             ToBeUpdatedBook.Genre == dto.Genre &&
             ToBeUpdatedBook.Count == dto.Count &&
-            ToBeUpdatedBook.BookISMB == dto.BookISMB;
+            ToBeUpdatedBook.BookISBN == dto.BookISBN;
 
             if (noChanges)
             {
-                throw new Exception("This book is the exact same.");
+                _logger.LogWarning("Bu kitap kütüphanedeki ile aynıdır.");
+                return false;
             }
-            if(dto.Count < 0) { throw new Exception("Kitap sayısı negatif olamaz."); }
+            if(dto.Count < 0) { _logger.LogWarning("Kitap sayısı negatif olamaz."); return false; }
             ToBeUpdatedBook.Name = dto.Name;
             ToBeUpdatedBook.Writer = dto.Writer;
             ToBeUpdatedBook.Genre = dto.Genre;
             ToBeUpdatedBook.Count = dto.Count;
-            ToBeUpdatedBook.BookISMB = dto.BookISMB;
+            ToBeUpdatedBook.BookISBN = dto.BookISBN;
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<List<Book>> ViewBookAsync(ViewBookDto dto)
+        public async Task<List<Book>?> ViewBookAsync(ViewBookDto dto)
         {
             var books = await _context.Books
                 .Where(b => b.Genre == dto.Genre)
                 .ToListAsync();
-
+            Console.WriteLine(dto.Genre);
             if (books.Count == 0)
             {
-                throw new Exception("No books found for this genre.");
+                _logger.LogWarning("Bu kategoride kitap yoktur.");
+                return null;
             }
 
             return books;
+        }
+
+        public async Task<List<User_Book>?> ViewBorrowedBookAsync()
+        {
+            var BorrowedBooks = await _context.User_Book.Where(x => x.Is_Returned == false).ToListAsync();
+            if (BorrowedBooks.Count == 0)
+            {
+                _logger.LogWarning("Hiçbir kitap ödünç alınmamıştır.");
+                return null;
+            }
+            return BorrowedBooks;
         }
     }
 }
