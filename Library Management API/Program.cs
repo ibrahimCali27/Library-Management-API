@@ -69,19 +69,38 @@ builder.Services.AddAuthentication(
         };
     options.Events = new JwtBearerEvents
     {
-            OnAuthenticationFailed = context =>
-            {
-                Console.WriteLine(context.Exception);
-                return Task.CompletedTask;
-            },
-        OnMessageReceived = context =>
+        OnChallenge = async context =>
         {
-            Console.WriteLine("TOKEN:");
-            Console.WriteLine(context.Token ?? "NULL");
-            Console.WriteLine(
-        context.Request.Headers.Authorization);
+            context.HandleResponse();
 
-            return Task.CompletedTask;
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            context.Response.ContentType = "application/json";
+            var logger = context.HttpContext.RequestServices
+        .GetRequiredService<ILogger<Program>>();
+
+            logger.LogWarning(
+                "Unauthorized access attempt. Path: {Path}",
+                context.Request.Path);
+            await context.Response.WriteAsJsonAsync(new
+            {
+                Message = "Geçersiz veya eksik token."
+            });
+        },
+
+        OnForbidden = async context =>
+        {
+            context.Response.StatusCode = StatusCodes.Status403Forbidden;
+            context.Response.ContentType = "application/json";
+            var logger = context.HttpContext.RequestServices
+        .GetRequiredService<ILogger<Program>>();
+
+            logger.LogWarning(
+                "Forbidden access attempt. Path: {Path}",
+                context.Request.Path);
+            await context.Response.WriteAsJsonAsync(new
+            {
+                Message = "Bu işlemi yapma yetkiniz yok."
+            });
         }
     };
     });
