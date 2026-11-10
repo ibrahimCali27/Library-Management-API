@@ -5,7 +5,7 @@ namespace LibraryManagement.Domain.Entities
     public class Fine
     {
         public int Id { get; set; }
-        public int User_BookId { get; set; }
+        public int UserBookId { get; set; }
         public UserBook UserBook { get; set; }
         public decimal Price { get; set; }
         public DateOnly FineDate { get; set; }

@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.domain\\domainservice\\userdomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|solutionrelative:librarymanagement.domain\\domainservice\\userdomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application.contracts\\validators\\validationmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|solutionrelative:librarymanagement.application.contracts\\validators\\validationmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B981AD9-EF48-3C32-AAF4-B3D93041CDAB}|LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.domain.shared\\librarydomainerrorcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B981AD9-EF48-3C32-AAF4-B3D93041CDAB}|LibraryManagement.Domain.Shared\\LibraryManagement.Domain.Shared.csproj|solutionrelative:librarymanagement.domain.shared\\librarydomainerrorcodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.domain\\domainservice\\borrowdomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|solutionrelative:librarymanagement.domain\\domainservice\\borrowdomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.domain\\entities\\user.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|solutionrelative:librarymanagement.domain\\entities\\user.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.domain\\domainservice\\finedomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|solutionrelative:librarymanagement.domain\\domainservice\\finedomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6A5773-9C2E-3603-777A-BD140C4744D3}|LibraryManagement.Domain\\LibraryManagement.Domain.csproj|solutionrelative:librarymanagement.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B06D22FF-9A3E-2A70-5464-F4A07B9ED3FD}|LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.entityframeworkcore\\entitytypeconfiguration\\booktypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B06D22FF-9A3E-2A70-5464-F4A07B9ED3FD}|LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj|solutionrelative:librarymanagement.entityframeworkcore\\entitytypeconfiguration\\booktypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,86 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserDomainService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\DomainService\\UserDomainService.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.Domain\\DomainService\\UserDomainService.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\DomainService\\UserDomainService.cs",
-              "RelativeToolTip": "LibraryManagement.Domain\\DomainService\\UserDomainService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T13:38:36.964Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LibraryDomainErrorCodes.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain.Shared\\LibraryDomainErrorCodes.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.Domain.Shared\\LibraryDomainErrorCodes.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain.Shared\\LibraryDomainErrorCodes.cs",
-              "RelativeToolTip": "LibraryManagement.Domain.Shared\\LibraryDomainErrorCodes.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "BookTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
+              "RelativeToolTip": "LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T13:55:35.74Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-11-10T12:37:10.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\Entities\\Book.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.Domain\\Entities\\Book.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\Entities\\Book.cs",
-              "RelativeToolTip": "LibraryManagement.Domain\\Entities\\Book.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAIAxwBIAAAARAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ValidationMessages.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
+              "RelativeToolTip": "LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T13:48:57.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.Domain\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "LibraryManagement.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAApwBQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T13:48:20.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FineDomainService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\DomainService\\FineDomainService.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.Domain\\DomainService\\FineDomainService.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\DomainService\\FineDomainService.cs",
-              "RelativeToolTip": "LibraryManagement.Domain\\DomainService\\FineDomainService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAIA0wBYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T13:25:17.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BorrowDomainService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\DomainService\\BorrowDomainService.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.Domain\\DomainService\\BorrowDomainService.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Domain\\DomainService\\BorrowDomainService.cs",
-              "RelativeToolTip": "LibraryManagement.Domain\\DomainService\\BorrowDomainService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T11:20:36.656Z",
+              "WhenOpened": "2026-11-10T12:23:19.107Z",
               "EditorCaption": ""
             }
           ]

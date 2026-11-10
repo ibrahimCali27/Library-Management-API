@@ -9,13 +9,13 @@ namespace LibraryManagement.Domain.Shared
         private const string Prefix = "Library.Error";
         //Kullanıcı Hesabı Hataları(10xxx)
         public const string UserAlreadyExists = $"{Prefix}:10001";
-        public const string PasswordShortLength = $"{Prefix}:10002";
-        public const string UserNotFound = $"{Prefix}:10003";
-        public const string UserNotChanged = $"{Prefix}:10004";
+        public const string PasswordShortLength = $"{Prefix}:10002";//
+        public const string UserNotFound = $"{Prefix}:10003";//
+        public const string UserNotChanged = $"{Prefix}:10004";//
         public const string NoMembershipInfo = $"{Prefix}:10005";
-        public const string BorrowLimitExceeded = $"{Prefix}:10006";
-        public const string IncorrectInputs = $"{Prefix}:10007";
-        public const string UserNullInputs = $"{Prefix}:10008";
+        public const string BorrowLimitExceeded = $"{Prefix}:10006";//
+        public const string IncorrectInputs = $"{Prefix}:10007";//
+        public const string UserNullInputs = $"{Prefix}:10008";//
         //Kitap Hataları(20xxx)
         public const string BookNotFound = $"{Prefix}:20000";
         public const string BookAlreadyExists = $"{Prefix}:20001";

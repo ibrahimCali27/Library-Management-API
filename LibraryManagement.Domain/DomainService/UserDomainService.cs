@@ -1,9 +1,5 @@
 ﻿using LibraryManagement.Domain.Entities;
 using LibraryManagement.Domain.Shared;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace LibraryManagement.Domain.DomainService
 {
     public class UserDomainService
@@ -18,10 +14,15 @@ namespace LibraryManagement.Domain.DomainService
                 if (user.Email == null || user.PasswordHash == null) { throw new BusinessException(LibraryDomainErrorCodes.IncorrectInputs); }
             }
         }
-        public void UserNotChanged(User user)
+        public void UserNotChanged(User CurrentUser,User UpdatedUser)
         {
-            var User
-            var NotChanged = user.Name
+           
+            var NotChanged = CurrentUser.Name == UpdatedUser.Name&&
+                            CurrentUser.Email==UpdatedUser.Email&&
+                            CurrentUser.PasswordHash==UpdatedUser.PasswordHash&&
+                            CurrentUser.Surname==UpdatedUser.Surname&&
+                            CurrentUser.MembershipId==UpdatedUser.MembershipId;
+            if (NotChanged) {throw new BusinessException(LibraryDomainErrorCodes.UserNotChanged); }
         }
     }
 }

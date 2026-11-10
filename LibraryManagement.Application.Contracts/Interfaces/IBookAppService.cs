@@ -5,7 +5,7 @@ using LibraryManagement.Domain.Entities;
 
 namespace Business_.Interfaces
 {
-    public interface IBookService
+    public interface IBookAppService
     {
         Task<ApiResult<UserBook>> BorrowBookAsync(int UserId, int BookId, BookBorrowDto dto);
         Task<ApiResult<int>> ReturnBookAsync(BookReturnDto dto);

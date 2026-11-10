@@ -1,14 +1,10 @@
-﻿using Microsoft.Identity.Client.NativeInterop;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LibraryManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Entity.Entities;
 
-namespace DataAccess.Library_DbContext
+namespace LibraryManagement.EntityFrameworkCore.Library_DbContext
 {
-    public class DBContext : DbContext {
-        public DBContext(DbContextOptions<DBContext> options)
+    public class LibraryDbContext : DbContext {
+        public LibraryDbContext(DbContextOptions<LibraryDbContext> options)
             : base(options)
         {
         }
@@ -16,6 +12,6 @@ namespace DataAccess.Library_DbContext
         public DbSet<Fine> Fines { get; set; }
         public DbSet<Membership> Memberships { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<User_Book> User_Book { get; set; }
+        public DbSet<UserBook> User_Book { get; set; }
     }
 }

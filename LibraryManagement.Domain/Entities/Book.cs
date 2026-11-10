@@ -10,7 +10,7 @@ namespace LibraryManagement.Domain.Entities
         public string Genre { get; set; }
         public int Count { get; set; }
         public string BookISBN { get; set; }
-        public ICollection<UserBook> UserBook { get; set; }
+        public ICollection<UserBook> UserBooks { get; set; }
         
         
         public void BookBorrow()

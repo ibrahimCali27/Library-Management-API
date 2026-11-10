@@ -1,18 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-
-namespace DataAccess.Library_DbContext // Sizin namespace adınız neyse onu yazın
-{
-    public class LibraryDbContextFactory : IDesignTimeDbContextFactory<DBContext>
+using Microsoft.Extensions.Configuration;
+namespace LibraryManagement.EntityFrameworkCore.Library_DbContext {
+    public class LibraryDbContextFactory : IDesignTimeDbContextFactory<LibraryDbContext>
     {
-        public DBContext CreateDbContext(string[] args)
+        public LibraryDbContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<DBContext>();
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-            // Buraya geçici olarak lokal SQL Server bağlantı adresinizi yazın
-            optionsBuilder.UseSqlServer("Server=LAPTOP-0O1D3ABP\\SQLEXPRESS;Database=Library Management API;Trusted_Connection=True;TrustServerCertificate=True;");
+            var connectionString =
+                configuration.GetConnectionString("DefaultConnection");
 
-            return new DBContext(optionsBuilder.Options);
+            var optionsBuilder = new DbContextOptionsBuilder<LibraryDbContext>();
+
+            optionsBuilder.UseSqlServer(connectionString);
+
+            return new LibraryDbContext(optionsBuilder.Options);
         }
     }
 }

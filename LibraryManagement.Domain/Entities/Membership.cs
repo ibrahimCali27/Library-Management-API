@@ -13,8 +13,8 @@
         public MembershipType Type { get; set; }
         public int BorrowLimit { get; set; }
         public bool IsUnlimited { get; set; }
-        public float Price { get; set; }
-        public ICollection<User> User { get; set; }
+        public decimal Price { get; set; }
+        public ICollection<User> Users { get; set; }
 
     }
 }

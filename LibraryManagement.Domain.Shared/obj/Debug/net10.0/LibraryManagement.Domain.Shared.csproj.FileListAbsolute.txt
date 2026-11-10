@@ -23,3 +23,4 @@ C:\Users\user\source\repos\Solution1\LibraryManagement.Domain.Shared\obj\Debug\n
 C:\Users\user\source\repos\Solution1\LibraryManagement.Domain.Shared\obj\Debug\net10.0\LibraryManagement.Domain.Shared.pdb
 C:\Users\user\source\repos\Solution1\LibraryManagement.Domain.Shared\obj\Debug\net10.0\ref\LibraryManagement.Domain.Shared.dll
 C:\Users\user\source\repos\Solution1\LibraryManagement.Domain.Shared\obj\Debug\net10.0\LibraryM.CBF1824D.Up2Date
+C:\Users\user\source\repos\Solution1\LibraryManagement.Domain.Shared\obj\Debug\net10.0\LibraryManagement.Domain.Shared.sourcelink.json
