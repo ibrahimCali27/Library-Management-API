@@ -1,0 +1,24 @@
+﻿{
+  "Library.Error:10001": "Bu email ile kullanıcı önceden oluşturulmuş.",
+  "Library.Error:10002": "Şifrede en az 8 karakter bulunmalıdır.",
+  "Library.Error:10003": "Bu kullanıcı bulunamamıştır.",
+  "Library.Error:10004": "Bu kullanıcı için güncellenilebilecek bilgi girilmemiştir.",
+  "Library.Error:10005": "Bu tür üyelik bulunamamıştır.",
+  "Library.Error:10006": "Ödünç alma limiti aşılacağından üyelik değiştirilmemiştir.",
+  "Library.Error:10007": "Girdiğiniz e-posta veya şifre yanlış.",
+  "Library.Error:10008": "Kullanıcı bilgilerini lütfen giriniz.",
+
+  "Library.Error:20000": "Aradığınız kitap bulunamamıştır.",
+  "Library.Error:20001": "Eklemeye çalıştığınız kitap kütüphanede vardır.",
+  "Library.Error:20002": "Bu kitap için güncellenilebilecek bilgi girilmemiştir.",
+  "Library.Error:20003": "Kitap sayısı negatif olamaz.",
+  "Library.Error:20004": "Kitap bilgilerini lütfen giriniz.",
+
+  "Library.Error:30000": "Bu kitap kütüphanede yoktur.",
+  "Library.Error:30001": "Ödünç kaydı bulunamamıştır.",
+  "Library.Error:30002": "Ödünç alma limitine ulaşılmıştır.",
+
+  "Library.Error:40000": "Bu ceza kayıtlarda yoktur.",
+  "Library.Error:40001": "Cezayı ödemek için yeterli bakiye yoktur.",
+  "Library.Error:40002": "Cezayı ödemeden önce lütfen kitabı iade ediniz."
+}

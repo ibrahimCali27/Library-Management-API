@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="../Library-Management-API/Business_/Business_.csproj" />
+  <Project Path="../Library-Management-API/DataAccess/DataAccess.csproj" />
+  <Project Path="LibraryManagement.Application.Contracts/LibraryManagement.Application.Contracts.csproj" />
+  <Project Path="LibraryManagement.Application/LibraryManagement.Application.csproj" />
+  <Project Path="LibraryManagement.Domain.Shared/LibraryManagement.Domain.Shared.csproj" />
+  <Project Path="LibraryManagement.Domain/LibraryManagement.Domain.csproj" />
+  <Project Path="LibraryManagement.EntityFrameworkCore/LibraryManagement.EntityFrameworkCore.csproj" />
+</Solution>

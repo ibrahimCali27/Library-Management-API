@@ -1,0 +1,21 @@
+﻿using Microsoft.Identity.Client.NativeInterop;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Entity.Entities;
+
+namespace DataAccess.Library_DbContext
+{
+    public class DBContext : DbContext {
+        public DBContext(DbContextOptions<DBContext> options)
+            : base(options)
+        {
+        }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Fine> Fines { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<User_Book> User_Book { get; set; }
+    }
+}
