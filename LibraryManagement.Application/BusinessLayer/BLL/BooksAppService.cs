@@ -1,5 +1,4 @@
-﻿using Business_.Interfaces;
-using LibraryManagement.EntityFrameworkCore.Library_DbContext;
+﻿using LibraryManagement.EntityFrameworkCore.Library_DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Data.Entity;

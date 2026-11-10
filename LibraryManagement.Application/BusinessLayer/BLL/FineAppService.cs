@@ -1,10 +1,11 @@
 ﻿using Business_.DTOs.Fine_DTOs;
+using LibraryManagement.Application.Contracts.DTOs.Fine_DTOs;
 using LibraryManagement.EntityFrameworkCore.Library_DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 namespace LibraryManagement.Application.BusinessLayer.BLL
 {
-    public class FineService(DbContext context,ILogger<FineService>logger) : IFineAppService
+    public class FineService(LibraryDbContext context,ILogger<FineService>logger) : IFineAppService
     {
         private readonly LibraryDbContext _context = context;
         private readonly ILogger<FineService> _logger = logger;

@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../Library-Management-API/Library Management API/Library Management API.csproj" />
+  <Project Path="Library Management API/Library Management API.csproj" Id="42a1351a-991b-478c-9529-15cadb1e23cc" />
   <Project Path="LibraryManagement.Application.Contracts/LibraryManagement.Application.Contracts.csproj" />
   <Project Path="LibraryManagement.Application/LibraryManagement.Application.csproj" />
   <Project Path="LibraryManagement.Domain.Shared/LibraryManagement.Domain.Shared.csproj" />

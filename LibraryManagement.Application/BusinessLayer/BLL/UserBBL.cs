@@ -1,5 +1,4 @@
-﻿using Business_.DTOs.User_DTOs;
-using Business_.Interfaces;
+﻿using LibraryManagement.Application.Contracts.DTOs.User_DTOs;
 using LibraryManagement.Application.Contracts.Interfaces;
 using LibraryManagement.EntityFrameworkCore.Library_DbContext;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +13,7 @@ namespace LibraryManagement.Application.BusinessLayer.BLL
         private readonly IJWTAppService _jwtService = jwtService;
         private readonly ILogger<UserService> _logger = logger;
 
-        public async Task<Create_JWT_Dto?> CreateUserAsync(CreateUserDto dto)
+        public async Task<Create_JWT_Dto?> CreateUserAsync(UserCreateDto dto)
         {
             var existingUser = await _context.Users
                 .FirstOrDefaultAsync(x => x.Email == dto.Email);

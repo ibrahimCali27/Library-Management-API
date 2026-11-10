@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application.contracts\\validators\\validationmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|solutionrelative:librarymanagement.application.contracts\\validators\\validationmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42A1351A-991B-478C-9529-15CADB1E23CC}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\solution1\\library management api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42A1351A-991B-478C-9529-15CADB1E23CC}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B06D22FF-9A3E-2A70-5464-F4A07B9ED3FD}|LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.entityframeworkcore\\entitytypeconfiguration\\booktypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B06D22FF-9A3E-2A70-5464-F4A07B9ED3FD}|LibraryManagement.EntityFrameworkCore\\LibraryManagement.EntityFrameworkCore.csproj|solutionrelative:librarymanagement.entityframeworkcore\\entitytypeconfiguration\\booktypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42A1351A-991B-478C-9529-15CADB1E23CC}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\solution1\\library management api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42A1351A-991B-478C-9529-15CADB1E23CC}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A1351A-991B-478C-9529-15CADB1E23CC}|Library Management API\\Library Management API.csproj|c:\\users\\user\\source\\repos\\solution1\\library management api\\controllers\\finecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42A1351A-991B-478C-9529-15CADB1E23CC}|Library Management API\\Library Management API.csproj|solutionrelative:library management api\\controllers\\finecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application.contracts\\interfaces\\iuserappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|solutionrelative:librarymanagement.application.contracts\\interfaces\\iuserappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\businesslayer\\bll\\jwtbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application\\businesslayer\\bll\\booksappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\businesslayer\\bll\\booksappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\businesslayer\\bll\\userbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application\\businesslayer\\bll\\fineappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD2E0EC-E0CF-67CA-A295-A73437BB9689}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\businesslayer\\bll\\fineappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|c:\\users\\user\\source\\repos\\solution1\\librarymanagement.application.contracts\\dtos\\fine_dtos\\viewfinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67DD7C03-8693-9A5E-9A70-E8B26C969B4B}|LibraryManagement.Application.Contracts\\LibraryManagement.Application.Contracts.csproj|solutionrelative:librarymanagement.application.contracts\\dtos\\fine_dtos\\viewfinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,28 +50,119 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
-              "RelativeToolTip": "LibraryManagement.EntityFrameworkCore\\EntityTypeConfiguration\\BookTypeConfiguration.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FineController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\Library Management API\\Controllers\\FineController.cs",
+              "RelativeDocumentMoniker": "Library Management API\\Controllers\\FineController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\Library Management API\\Controllers\\FineController.cs",
+              "RelativeToolTip": "Library Management API\\Controllers\\FineController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAswDgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T12:37:10.213Z",
+              "WhenOpened": "2026-11-10T13:48:32.962Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ValidationMessages.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
-              "RelativeDocumentMoniker": "LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
-              "RelativeToolTip": "LibraryManagement.Application.Contracts\\Validators\\ValidationMessages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\Library Management API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Library Management API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\Library Management API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Library Management API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswEQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T12:23:19.107Z",
+              "WhenOpened": "2026-11-10T13:48:21.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\Library Management API\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Library Management API\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\Library Management API\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Library Management API\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T13:47:17.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JWTBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\BusinessLayer\\BLL\\JWTBBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T13:39:33.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BooksAppService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\BooksAppService.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\BusinessLayer\\BLL\\BooksAppService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\BooksAppService.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\BusinessLayer\\BLL\\BooksAppService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAjwAkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T13:39:08.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserBBL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\UserBBL.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\BusinessLayer\\BLL\\UserBBL.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwDYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T13:38:03.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FineAppService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\FineAppService.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\BusinessLayer\\BLL\\FineAppService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application\\BusinessLayer\\BLL\\FineAppService.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\BusinessLayer\\BLL\\FineAppService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T13:37:21.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserAppService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\Interfaces\\IUserAppService.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application.Contracts\\Interfaces\\IUserAppService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\Interfaces\\IUserAppService.cs",
+              "RelativeToolTip": "LibraryManagement.Application.Contracts\\Interfaces\\IUserAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T13:37:14.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ViewFineDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\DTOs\\Fine_DTOs\\ViewFineDto.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application.Contracts\\DTOs\\Fine_DTOs\\ViewFineDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Solution1\\LibraryManagement.Application.Contracts\\DTOs\\Fine_DTOs\\ViewFineDto.cs",
+              "RelativeToolTip": "LibraryManagement.Application.Contracts\\DTOs\\Fine_DTOs\\ViewFineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T13:33:36.116Z",
               "EditorCaption": ""
             }
           ]

@@ -2,7 +2,7 @@
 using LibraryManagement.Application.Contracts.DTOs.Auth_DTOs;
 using LibraryManagement.Application.Contracts.DTOs.User_DTOs;
 using System.ComponentModel.DataAnnotations;
-namespace Business_.Interfaces
+namespace LibraryManagement.Application.Contracts.Interfaces
 {
     public interface IUserAppService
     {

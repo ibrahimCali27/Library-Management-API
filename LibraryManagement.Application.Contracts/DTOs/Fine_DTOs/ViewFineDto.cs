@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business_.DTOs.Fine_DTOs
+namespace LibraryManagement.Application.Contracts.DTOs.Fine_DTOs
 {
     public class ViewFineDto
     {

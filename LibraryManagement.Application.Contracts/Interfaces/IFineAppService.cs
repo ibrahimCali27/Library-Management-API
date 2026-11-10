@@ -3,6 +3,7 @@ using LibraryManagement.Application.Contracts.DTOs.Book_DTOs;
 using LibraryManagement.Application.Contracts;
 using LibraryManagement.Domain.Entities;
 using Business_.DTOs.Fine_DTOs;
+using LibraryManagement.Application.Contracts.DTOs.Fine_DTOs;
 namespace Business_.Interfaces
 {
     public interface IFineService
